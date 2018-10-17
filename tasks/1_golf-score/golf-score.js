@@ -1,3 +1,5 @@
+/* eslint "require-jsdoc": 0 */
+
 export const GOLF_SCORES = {
     HOLE_IN_ONE: 'Hole-in-one!',
     EAGLE:'Eagle',
