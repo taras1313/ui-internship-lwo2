@@ -5,11 +5,11 @@ export function getNumbers(str) {
   let arr = [];
   for (let i = 0; i < temp.length; i++) {
     if (!isNaN(parseInt(temp[i]))) {
-      arr.push(temp[i])
+      arr.push(temp[i]);
     }
   }
   let testArr = arr.map((el) => {
-    return Number(el)
-  })
-  return testArr
+    return Number(el);
+  });
+  return testArr;
 }
