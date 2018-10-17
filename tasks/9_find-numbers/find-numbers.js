@@ -1,3 +1,5 @@
+/* eslint "require-jsdoc": 0 */
+
 export function getNumbers(str) {
   let temp = str.split('');
   let arr = [];

@@ -1,3 +1,5 @@
+/* eslint "require-jsdoc": 0 */
+
 export function findLongestWord (str) {
     let spl = str.split(' ');
     let lg = [];

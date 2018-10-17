@@ -1,3 +1,5 @@
+/* eslint "require-jsdoc": 0 */
+
 export const contacts = [
     {
         "firstName": "Akira",
