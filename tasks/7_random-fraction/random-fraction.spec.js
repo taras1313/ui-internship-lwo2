@@ -1,5 +1,5 @@
  import { randomFraction } from './random-fraction';
-// check
+
 describe('random-fraction', () => {
     test('should return a number.', () => {
         expect(typeof randomFraction()).toBe('number');
