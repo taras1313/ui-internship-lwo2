@@ -1,7 +1,10 @@
 /* eslint "require-jsdoc": 0 */
 
 export function runningAverage() {
+  let saver = 0;
+  let counter = 0;
   return function(n) {
-    return (10+n)/2;
+    counter++;
+    return (saver+=n)/counter;
   };
 }
