@@ -1,7 +1,7 @@
-import { findLetter } from './missed-letters';
+// import { findLetter } from './missed-letters';
 
 
-describe('Missed letter', () => {
+xdescribe('Missed letter', () => {
 
     test('findLetter("abce") should return "d".', () => {
         expect(findLetter("abce")).toBe("d");

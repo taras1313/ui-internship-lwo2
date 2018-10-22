@@ -1,6 +1,6 @@
- import { translatePigLatin } from './pig-latin';
+//  import { translatePigLatin } from './pig-latin';
 
-describe('Pig Latin', () => {
+xdescribe('Pig Latin', () => {
 
     test('translatePigLatin("california") should return "aliforniacay"', () => {
         expect(translatePigLatin("california")).toBe("aliforniacay");
