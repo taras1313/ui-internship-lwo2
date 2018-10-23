@@ -1,15 +1,16 @@
 /* eslint "require-jsdoc": 0 */
 
 export function uniqueInOrder(el) {
-  if (typeof el ==='string') {
-    el = el.split('');
+  let elClone = el.slice();
+  if (typeof elClone ==='string') {
+    elClone = elClone.split('');
   }
-  for (let i = 0; i<el.length-1; ) {
-    if (el[i]===el[i+1]) {
-      el.splice(i, 1);
+  for (let i = 0; i < elClone.length; ) {
+    if (elClone[i] === elClone[i-1]) {
+      elClone.splice(i, 1);
     } else {
       i++;
     }
   }
-  return el;
+  return elClone;
 }

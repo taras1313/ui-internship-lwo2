@@ -2,22 +2,18 @@
 
 export function minNumberToPrime(arr) {
   let sum = arr.reduce((accum, curr) => accum + curr);
-  let flag = true;
   let counter = 0;
-  let cond = true;
-  while (cond) {
-    for (let i = sum-1; i>2; i--) {
-      if (sum%i===0) {
-        flag = false;
-      }
-    }
-    if (flag === false) {
-      sum++;
-      counter++;
-      flag = true;
-    } else {
-      break;
-    }
+  while (!isPrime(sum)) {
+    sum++;
+    counter++;
   }
-  return (counter);
+  return counter;
 }
+
+function isPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
+}
+

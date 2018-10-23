@@ -1,7 +1,7 @@
 /* eslint "require-jsdoc": 0 */
 
 export function arrayLeaders(arr) {
-  let res = [];
+  const res = [];
   for (let i = 0; i< arr.length; i++) {
     let curr = 0;
     for (let j = i+1; j<arr.length; j++) {
