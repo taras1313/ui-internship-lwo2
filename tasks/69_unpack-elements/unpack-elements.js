@@ -1,5 +1,5 @@
 /* eslint "require-jsdoc": 0 */
-
+// i'll fix this one
 export function unpackArray(arr) {
   let notFiltred = [];
   for (let i = 0; i < arr.length; i++) {
@@ -12,7 +12,6 @@ export function unpackArray(arr) {
         notFiltred.splice(i, 1);
         notFiltred = notFiltred.concat(curr);
       }
-      
     } else notFiltred.push(arr[i]);
   }
   notFiltred = notFiltred.map((el) => {
