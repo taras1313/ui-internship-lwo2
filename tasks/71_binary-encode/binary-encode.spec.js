@@ -1,5 +1,5 @@
-// import { binaryEncode } from './binary-encode';
-// import { TEST_BLOCKS } from '../70_binary-decode/binary-decode.spec';
+import { binaryEncode } from './binary-encode';
+ import { TEST_BLOCKS } from '../70_binary-decode/binary-decode.spec';
 
 xdescribe('binary-encode', () => {
     test('should return a string', () => {
