@@ -1,4 +1,4 @@
- import { translatePigLatin } from './pig-latin';
+import { translatePigLatin } from './pig-latin';
 
 describe('Pig Latin', () => {
 

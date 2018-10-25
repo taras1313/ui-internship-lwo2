@@ -4,7 +4,8 @@
   "description": "Goal of the project is to provide the platform to write algorithms, tests and get markup knowledge",
   "scripts": {
     "test": "jest",
-    "lint": "./node_modules/.bin/eslint tasks/**/*.js",
+    "lint": "./node_modules/.bin/eslint tasks/**/*.js", 
+    "lint:fix": "./node_modules/.bin/eslint --fix tasks/**/*.js",
     "tdd": "jest --watch"
   },
   "husky": {
