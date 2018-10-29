@@ -1,10 +1,10 @@
 /* eslint "require-jsdoc": 0 */
 
 export function sumFibs(n) {
-  let arr = [1, 1];
+  const arr = [1, 1];
   let currNum = 2;
   for (let i = 2; i < n; i++) {
-    currNum = arr[i-1]+arr[i-2];
+    currNum = arr[i - 1] + arr[i - 2];
     if (currNum > n) break;
     arr.push(currNum);
   }

@@ -7,10 +7,11 @@ export function sumPrimes(n) {
     for (let j = i-1; j > 1; j--) {
       if (i % j === 0) flag = false;
     }
-    if (flag === true) {
+    if (flag) {
       res.push(i);
       flag = true;
-    } else flag = true;
+    }
+    flag = true;
   }
   return res.reduce((a, e) => a + e);
 }

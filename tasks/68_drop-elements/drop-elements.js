@@ -2,10 +2,11 @@
 
 export function dropElements(arr, callback) {
   let resArr = [];
+  let arrClone = arr.slice();
   const l = arr.length;
   for (let i = 0; i < l; i++) {
-    if (callback(arr[i])) {
-      resArr = arr.splice(i);
+    if (callback(arrClone[i])) {
+      resArr = arrClone.splice(i);
     }
   }
   return resArr;

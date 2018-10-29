@@ -1,8 +1,8 @@
 /* eslint "require-jsdoc": 0 */
 
 export function insert(str, content, i = 0) {
-  let strArr = str.split('');
-  if (!i) {
+  const strArr = str.split('');
+  if (i === 0) {
     strArr.unshift(content);
     return strArr.join('');
   } else {

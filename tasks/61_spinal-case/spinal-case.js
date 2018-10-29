@@ -5,13 +5,16 @@ export function spinalCase(str) {
   let res = '';
   strArr[0] = strArr[0].toLowerCase();
   for (let i = 0; i < strArr.length; i++) {
-    if (!strArr[i].match(/[A-Z,a-z]/)) {
+    if (!strArr[i].match(/[A-Za-z]/)) {
       res += '-';
       strArr[i + 1] = strArr[i + 1].toLowerCase();
       continue;
     }
-    if (strArr[i].match(/[A-Z]/) && res[i] !== '-') res += '-' + strArr[i];
-    else res += strArr[i];
+    if (strArr[i].match(/[A-Z]/) && res[i] !== '-') {
+      res += '-' + strArr[i];
+    } else {
+      res += strArr[i];
+    }
   }
   return res.toLowerCase();
 }

@@ -1,7 +1,7 @@
 /* eslint "require-jsdoc": 0 */
 
 export function swapCases(str) {
-  let strArr = str.split('');
+  const strArr = str.split('');
   return strArr.map((el)=>{
     if (el !== ' ') {
       if (el === el.toLowerCase()) {
@@ -9,8 +9,7 @@ export function swapCases(str) {
       } else {
         return el.toLowerCase();
       }
-    } else {
-      return ' ';
     }
+    return ' ';
   }).join('');
 }
