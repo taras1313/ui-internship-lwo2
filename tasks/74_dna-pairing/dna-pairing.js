@@ -7,6 +7,5 @@ export function pairElement(str) {
     A: ['A', 'T'],
     T: ['T', 'A'],
   };
-  
   return strArr.map((el) => dna[el]);
 }
