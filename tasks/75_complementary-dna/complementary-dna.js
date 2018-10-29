@@ -1,5 +1,4 @@
 /* eslint "require-jsdoc": 0 */
-
 export function DNAStrand(str) {
   let res = '';
   const dna = {
@@ -11,5 +10,6 @@ export function DNAStrand(str) {
   for (let i = 0; i<str.length; i++) {
     res+= dna[str[i]][1];
   }
+
   return res;
 }

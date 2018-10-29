@@ -1,7 +1,6 @@
 /* eslint "require-jsdoc": 0 */
-
 export function expressionMatter(...args) {
-  let arr = [...args];
+  let arr = args.slice();
   if (arr.every((el) => el === 1)) return 3;
   let res1 = arr.reduce((a, e) => a * e, 1);
   let test = arr.splice(arr.indexOf(Math.max(...arr)), 1);

@@ -1,5 +1,4 @@
 /* eslint "require-jsdoc": 0 */
-
 export function validBraces(str) {
   let strCopy = str;
   while (strCopy.indexOf('[]') !== -1 ||
@@ -9,5 +8,3 @@ export function validBraces(str) {
   }
   return strCopy.length === 0;
 }
-
-// made with help of Sophia
