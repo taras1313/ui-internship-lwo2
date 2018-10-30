@@ -1,6 +1,6 @@
 /* eslint "require-jsdoc": 0 */
 
- class God {
+class God {
   static create() {
     return [new Man('Adam'), new Woman('Eve')];
   }
@@ -26,4 +26,4 @@ class Woman extends Human {
   }
 }
 
-export {God, Human, Man, Woman}
+export {God, Human, Man, Woman};
