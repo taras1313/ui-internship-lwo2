@@ -1,5 +1,4 @@
 /* eslint 'require-jsdoc': 0 */
-
 export function sym(...arg) {
   const arr = arg;
   function unique(first, second) {

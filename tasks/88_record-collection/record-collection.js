@@ -35,12 +35,6 @@ export function updateRecords(id, prop, value) {
     collectionCopy[id][prop] = [value];
   } else if (prop === 'artist' && !collectionCopy[id][prop] && value !== '') {
     collectionCopy[id][prop] = value;
-  } else if (prop === 'artist' && collectionCopy[id][prop] && value !== '') {
-    collectionCopy[id][prop] = value;
-  } else if (prop === 'album' && !collectionCopy[id][prop] && value !== '') {
-    collectionCopy[id][prop] = value;
-  } else if (prop === 'album' && collectionCopy[id][prop] && value !== '') {
-    collectionCopy[id][prop] = value;
   }
   return collectionCopy;
 }
