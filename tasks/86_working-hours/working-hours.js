@@ -1,10 +1,10 @@
 /* eslint "require-jsdoc": 0 */
 export function formatWorkingHours(INPUT_DATA) {
   if (!INPUT_DATA.length) return [];
-  let days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+  let days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
   days = days.map((el) => {
-    let curr = INPUT_DATA.find((e, i, arr) => e['day'] === el)
+    let curr = INPUT_DATA.find((e, i, arr) => e['day'] === el);
     return curr;
   });
   return days.reduce((acc, el, i, arr) => {
