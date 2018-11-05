@@ -3,7 +3,7 @@
     color: #868f93;
     background-color: #d9e1e6;
     font-family: Lato;
-    font-size: 10px;
+    font-size: 8px;
     padding: 8px 0;
 }
 
@@ -34,14 +34,14 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 25px 0;
+    padding: 21px 0;
 }
 
 .cart {
     padding: 10px 32px;
     border: 2px solid #ded3aa;
     color: #111111;
-    font-size: 12px;
+    font-size: 9px;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
@@ -61,7 +61,7 @@ header {
 }
 
 .currency>span {
-    font-size: 12px;
+    font-size: 9px;
 }
 
 .currency>img {
@@ -86,14 +86,14 @@ header {
 
 @media screen and (max-width: 380px) {
     .slogan {
-        font-size: 7px;
+        font-size: 6px;
     }
     .logo>img {
         width: 100px;
     }
     .cart {
-        font-size: 11px;
-        padding: 8px 30px;
+        font-size: 9px;
+        padding: 8px 20px;
     }
 
 }

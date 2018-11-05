@@ -1,7 +1,7 @@
 nav {
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
-    padding: 10px 0;
+    padding: 1px 0;
 }
 
 nav>div {
@@ -24,7 +24,7 @@ nav>div {
 }
 
 .fa-bars {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 nav ul {
@@ -40,12 +40,12 @@ nav ul {
 
 nav ul>li {
     display: inline-block;
-    margin-right: 2.5vw;
+    margin: 0 1.2vw;
     /*how to do without margin*/
 }
 
 nav a {
-    font-size: 13px;
+    font-size: 9px;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
@@ -62,6 +62,7 @@ nav a:hover {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+        font-size: 14px;
 }
 
 .fa-heart {
@@ -107,7 +108,7 @@ nav a:hover {
 }
 
 .burger-menu li {
-    padding: 10px 12%;
+    padding: 10px 17%;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
@@ -135,7 +136,11 @@ nav a:hover {
         display: none;
     }
 
+    nav>div {
+        padding: 6px 0 7px 0
+    }
+
     .burger-menu li a {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
