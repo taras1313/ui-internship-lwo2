@@ -3,7 +3,7 @@
  const bob = new Person('Bob Ross');
 
 describe('Make a person', () => {
-    
+
     // test('Object.keys(bob).length should return 6', () => {
     //     expect(Object.keys(bob).length).toBe(6);
     // });
