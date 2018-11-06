@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 11" width="16" height="11">
+	<defs>
+		<image width="16" height="11" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAACJklEQVQozwEbAuT9AGt4mFZjhmp0pVplnWFvrlhoplJinWVxoXJxk6aXrLeWoa1/f651bqtwYqpxXqtyXgBZZ4zg7/+4xfng8P+mufvg9f+zx//j8f+np8v/7f//5fH/z9L/19D/39H/18Pao44AYXOjus7/XnSuX3u8WXq/TW6zSWelWm6jdHOdppKuqn+QvoeNpWhlpGhd2qWTp3dhAFZvpaC688zr/1yDxsn2/1eHyb3l/22GvF9gjPzk//7R5f/O1f/RzvzCtv/o1OK4oABRcKmYu/VeislGebo6dbdAfLtDdq8zU4Y6P2mch6aNYHSnbnWbYV2IVEbJo4yggWUAU2qgz+z/Vnq2yPb/RXm1r+P/S3arwNv/RkRr/+P//9Di+brC/8zH/9HE/+jSxqSJAGttna605Gh1qV5zqEVglWN/sSk+azxBaTglRYVZcpRUZKdcY5RKR6BeUtCch45gSADp2vn56//37//s6P/w7//e3v/28v/z5P/92/P/1ef/wcz/zdD/uLP/vrL/18S5gm0AwqOr3r7Jzq69qYqcnoGXlHiOhGd7h2V1j2Frj1ZcjkhIlEZCgTQqoFhJzo17nF9KAPfCuv/c1//V1f/Izf/U3P/X3//R2f/b3//Qz//W0//OyP/Rxv+8r/+2pv+/rtGKeAC+clvSgW7Nc2jHZmDSbm7JaWq6X17Aa2i6Z2HAbmOwWU+2XlCzWkyxWErBaVunUUJ9t1NTz9tsRAAAAA90RVh0SlBFRy1RdWFsaXR5ADkwMFHskQAAABF0RVh0SlBFRy1Db2xvcnNwYWNlADKBDSEkAAAAGHRFWHRKUEVHLUNvbG9yc3BhY2UtTmFtZQBSR0LP8UDuAAAAIXRFWHRKUEVHLVNhbXBsaW5nLWZhY3RvcnMAMngyLDF4MSwxeDHlUdu4AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="USA FLAG" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

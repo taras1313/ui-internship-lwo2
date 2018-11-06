@@ -1,0 +1,136 @@
+nav {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 1px 0;
+}
+
+nav>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.menu {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.fa-bars {
+    font-size: 13px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+nav ul>li {
+    display: inline-block;
+    margin: 0 1.2vw;
+}
+
+nav a {
+    font-size: 9px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+nav a:hover {
+    font-weight: bolder;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.search {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        font-size: 14px;
+}
+
+.fa-heart {
+    border-right: 1px dotted #868f93;
+    padding-right: 12px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.fa-heart:hover, .fa-search:hover {
+    cursor: pointer;
+    color: #ded3aa;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.fa-search {
+    margin-left: 10px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.burger-menu {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 5px 0;
+}
+
+.burger-menu>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.burger-menu li {
+    padding: 10px 17%;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.burger-menu li:hover {
+    background: #d9e1e6;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.burger-menu li a {
+    color: #555555;
+    display: block;
+}
+
+.burger-menu li a:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    nav ul {
+        display: none;
+    }
+
+    nav>div {
+        padding: 6px 0;
+    }
+
+    .burger-menu li a {
+        font-size: 13px;
+    }
+}
