@@ -41,7 +41,6 @@ nav ul {
 nav ul>li {
     display: inline-block;
     margin: 0 1.2vw;
-    /*how to do without margin*/
 }
 
 nav a {
@@ -73,7 +72,7 @@ nav a:hover {
     transition: .2s;
 }
 
-.fa-heart:hover {
+.fa-heart:hover, .fa-search:hover {
     cursor: pointer;
     color: #ded3aa;
     -webkit-transition: .2s;
@@ -87,15 +86,6 @@ nav a:hover {
     -o-transition: .2s;
     transition: .2s;
 }
-
-.fa-search:hover {
-    cursor: pointer;
-    color: #ded3aa;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
-}
-
 
 .burger-menu {
     border-bottom: 1px solid #e1e1e1;
@@ -137,7 +127,7 @@ nav a:hover {
     }
 
     nav>div {
-        padding: 6px 0 7px 0
+        padding: 6px 0;
     }
 
     .burger-menu li a {

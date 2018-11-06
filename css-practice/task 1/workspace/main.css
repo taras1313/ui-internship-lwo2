@@ -24,16 +24,11 @@ main {
         flex-basis: 55%;
 }
 
-.photo-holder img:hover {
-    cursor: pointer;
-}
-
 .big-pic {
-    width: 100%;
     margin-bottom: 10px;
 }
 
-.big-pic>img {
+.big-pic>img, .big-pic {
     width: 100%;
 }
 
@@ -81,10 +76,6 @@ main {
     font-size: 11px;
 }
 
-.fa-star:hover {
-    cursor: pointer;
-}
-
 .gr {
     color: #dfdfde;
 }
@@ -96,7 +87,6 @@ main {
 .review {
     text-decoration: underline;
     font-size: 10px;
-
 }
 
 .price {
@@ -120,7 +110,6 @@ main {
     margin-bottom: 0;
     margin-top: 21px;
 }
-
 
 .description>ul {
     padding-left: 16px;
@@ -146,8 +135,8 @@ main {
 }
 
 .customize>div {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
 }
 
 .customize>div:last-child {
@@ -173,7 +162,7 @@ main {
             justify-content: space-between;
 }
 
-.dropdown:hover {
+.dropdown:hover, .fa-star:hover, .small:hover, .photo-holder img:hover, .review:hover {
     cursor: pointer;
 }
 
@@ -257,10 +246,6 @@ main {
     font-size: 10px;
 }
 
-.small:hover {
-    cursor: pointer;
-}
-
 h4 {
     font-size: 11px;
 }
@@ -302,15 +287,6 @@ h4 {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
-
-}
-
-.cart-b a:last-child:hover {
-    background: #ded3aa;
-    color: white;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
 }
 
 .cart-b .fa-heart {
@@ -338,8 +314,6 @@ h4 {
     vertical-align: -webkit-baseline-middle;
 }
 
-
-
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -353,7 +327,6 @@ h4 {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
 }
-
 
 .fb a:nth-child(1) {
     background: #3d57a8;
@@ -376,15 +349,12 @@ h4 {
     border-radius: 3px;
     font-size: 8px;
     transition: .1s;
-    
 }
 
 .fb a:nth-child(2):hover {
     transition: .1s;
     transform: scale(1.05, 1.05);
 }
-
-
 
 .fb a:nth-child(3),
 .tw span,
@@ -396,7 +366,6 @@ h4 {
     padding: 4px;
     text-align: center;
 }
-
 
 .fa-twitter {
     color: #00acee;
@@ -471,11 +440,12 @@ h4 {
         -webkit-box-direction: normal;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
-
     }
+
     .customize>div {
         width: 100%
     }
+
     .customize>div>h4 {
         margin: 13px 0;
     }
@@ -512,7 +482,6 @@ h4 {
     .cart-b .fa-heart {
         padding-right: 2px;
     }
-
 }
 
 @media screen and (max-width: 425px) {
@@ -535,10 +504,6 @@ h4 {
     span.reviews-count,
     .rate span {
         font-size: 11px;
-    }
-
-    .review:hover {
-        cursor: pointer;
     }
 
     .customize {

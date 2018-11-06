@@ -1,14 +1,13 @@
-footer {
-    border-top: 1px solid #e1e1e1;
-    padding: 15px 0;
-    text-align: center;
-}
-
 footer span {
     color: #b5b5b5;
     font-size: 12px;
 }
 
+footer {
+    border-top: 1px solid #e1e1e1;
+    padding: 15px 0;
+    text-align: center;
+}
 
 @media screen and (max-width: 380px) {
     footer span {

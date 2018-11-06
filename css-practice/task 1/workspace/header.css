@@ -11,46 +11,47 @@
     cursor: pointer;
 }
 
-.logo>img {
+.logo > img {
     width: 110px;
 }
 
 .cancel {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
 }
 
+
 header {
+    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    flex-flow: row nowrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    justify-content: space-between;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            align-items: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    padding: 21px 0;
+    padding: 20px 0;
 }
 
 .cart {
     padding: 10px 32px;
     border: 2px solid #ded3aa;
-    color: #111111;
+    color: #111;
     font-size: 9px;
+    transition: .2s;
     -webkit-transition: .2s;
     -o-transition: .2s;
-    transition: .2s;
 }
 
 .cart:hover {
+    transition: .2s;
     -webkit-transition: .2s;
     -o-transition: .2s;
-    transition: .2s;
     background: #ded3aa;
     color: white;
     font-weight: bold;
@@ -60,13 +61,13 @@ header {
     cursor: pointer;
 }
 
-.currency>span {
+.currency > span {
     font-size: 9px;
 }
 
-.currency>img {
+.currency > img {
     vertical-align: middle;
-    margin-right: 7px;
+    margin-right: 8px;
 }
 
 .fa-caret-down {
@@ -79,6 +80,7 @@ header {
     .slogan {
         font-size: 8px;
     }
+
     .currency {
         display: none;
     }
@@ -88,9 +90,11 @@ header {
     .slogan {
         font-size: 6px;
     }
-    .logo>img {
+
+    .logo > img {
         width: 100px;
     }
+
     .cart {
         font-size: 9px;
         padding: 8px 20px;
