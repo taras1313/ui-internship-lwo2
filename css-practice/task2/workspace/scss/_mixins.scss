@@ -13,9 +13,6 @@
   background-position-y: $pos-y; 
 }
 
-// @mixin margins ($margins...) {
-//   margin: $margins; 
-// }
 
 @mixin spacing ($letter-s, $word-s) {
   letter-spacing: $letter-s;

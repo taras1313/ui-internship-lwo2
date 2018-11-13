@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  font-family: 'Exo', sans-serif;
+  font-family: $font_exo;
   max-width: 1440px;
   background: #ececec;
   box-sizing: border-box;
@@ -80,8 +80,8 @@ main {
 }
 
 .marged {
-margin-top: 40px;
-margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }  
 
-@import 'common_adaptive'
+@import 'common_responsive'

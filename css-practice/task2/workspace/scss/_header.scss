@@ -9,8 +9,6 @@ header {
     transform: translateX(-50%) translateY(-50%);
   }
 
-  // bg above should be on place of current header video
-  // background-image: url(../images/header-bg.png);
   background-size: cover;
   @include flex(center, center, row);
   width: 100%;
@@ -66,5 +64,5 @@ header {
   }
 }
 
-@import 'header_adaptive';
+@import 'header_responsive';
 
