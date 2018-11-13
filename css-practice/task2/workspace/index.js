@@ -6,51 +6,60 @@ const support = document.querySelector('.support h3');
 const about = document.querySelector('.about_us h3');
 const dropdownSupp = document.querySelector('.support ul');
 const dropdownAbout = document.querySelector('.about_us ul');
+const dNone = 'disp-none';
+const width768 = 768
+const hideEl = (el) => {
+  el.classList.add(dNone);
+}
+
+const showEl = (el) => {
+  el.classList.remove(dNone);
+}
 
 video.pause();
 
 playVideo.onclick = () => {
   if (video.paused) {
-    continueVideo.classList.add('disp-none');
-    pauseVideo.classList.remove('disp-none')
+    hideEl(continueVideo);
+    showEl(pauseVideo);
     video.play();
   } else {
-    continueVideo.classList.remove('disp-none');
-    pauseVideo.classList.add('disp-none')
+    showEl(continueVideo);
+    hideEl(pauseVideo);
     video.pause();
   }
 }
 
-if (innerWidth <= 768) {
-  dropdownAbout.classList.add('disp-none');
-  dropdownSupp.classList.add('disp-none');
+if (innerWidth <= width768) {
+  hideEl(dropdownAbout);
+  hideEl(dropdownSupp);
 }
 
 window.onresize = () => {
-  if (innerWidth <= 768) {
-    dropdownAbout.classList.add('disp-none');
-    dropdownSupp.classList.add('disp-none');
+  if (innerWidth <= width768) {
+    hideEl(dropdownAbout);
+    hideEl(dropdownSupp);
   } else {
-    dropdownAbout.classList.remove('disp-none');
-    dropdownSupp.classList.remove('disp-none');
+    showEl(dropdownAbout);
+    showEl(dropdownSupp);
   }
 }
 
 support.onclick = () => {
-  dropdownSupp.classList.contains('disp-none') ? dropdownSupp.classList.remove('disp-none') : dropdownSupp.classList.add('disp-none');
+  dropdownSupp.classList.contains(dNone) ? showEl(dropdownSupp) : hideEl(dropdownSupp);
 }
 
 support.onmouseleave = () => {
-  if (innerWidth <= 768) {
-    dropdownSupp.classList.add('disp-none');
+  if (innerWidth <= width768) {
+    hideEl(dropdownSupp);
   }
 }
 about.onclick = () => {
-  dropdownAbout.classList.contains('disp-none') ? dropdownAbout.classList.remove('disp-none') : dropdownAbout.classList.add('disp-none');
+  dropdownAbout.classList.contains(dNone) ? showEl(dropdownAbout) : hideEl(dropdownAbout);
 }
 
 about.onmouseleave = (e) => {
-  if (innerWidth <= 768) {
-    dropdownAbout.classList.add('disp-none');
+  if (innerWidth <= width768) {
+    hideEl(dropdownAbout);
   }
 }

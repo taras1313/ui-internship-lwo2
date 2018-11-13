@@ -17,7 +17,6 @@
   .img_holder {
     margin-top: 38px;
     width: fit-content;
-    background-color: rgba(251, 251, 251, 0.7);
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -35,7 +34,6 @@
 .team_p {
   word-spacing: 1px;
   line-height: 27px;
-  font-style: italic;
 }
 
-@import 'team_block_adaptive';
+@import 'team_block_responsive';
