@@ -4,9 +4,11 @@
   "description": "Goal of the project is to provide the platform to write algorithms, tests and get markup knowledge",
   "scripts": {
     "test": "jest",
-    "lint": "./node_modules/.bin/eslint tasks/**/*.js", 
+    "lint": "./node_modules/.bin/eslint tasks/**/*.js",
     "lint:fix": "./node_modules/.bin/eslint --fix tasks/**/*.js",
-    "tdd": "jest --watch"
+    "tdd": "jest --watch",
+    "watch:sass": "node-sass -w css-practice/task2/workspace/scss/ -o css-practice/task2/workspace/css/",
+    "build:sass": "node-sass css-practice/task2/workspace/scss/ -o css-practice/task2/workspace/css/"
   },
   "husky": {
     "hooks": {
@@ -23,6 +25,10 @@
     "eslint-config-google": "^0.10.0",
     "husky": "^1.1.2",
     "jest": "^21.1.0",
+    "node-sass": "^4.10.0",
     "regenerator-runtime": "^0.11.0"
+  },
+  "dependencies": {
+    "sass": "^1.14.3"
   }
 }
