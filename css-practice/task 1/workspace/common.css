@@ -1,0 +1,158 @@
+body {
+    font-family: Lato;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.width-65 {
+    max-width: 65%;
+}
+
+.margin-l-r-auto {
+    margin: auto;
+}
+
+.margin-y-20 {
+    margin: 20px 0;
+}
+
+.f-right {
+    float: right;
+}
+
+.display-inline-b {
+    display: inline-block;
+}
+
+.dark-blue {
+    color: #7291a1;
+}
+
+.dark-gray {
+    color: #555555;
+}
+
+.light-gray {
+    background: #f0f0f0;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.menu a {
+    display: inline-block;
+}
+
+.modal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    color: #555555;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+
+.log-in {
+    width: 50%;
+    height: 40%;
+    background: white;
+    position: relative;
+}
+
+.closer {
+    position: absolute;
+    z-index: 3;
+    top: 16px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+}
+
+.closer:hover {
+    cursor: pointer;
+}
+
+/* LOGIN PAGE ABOVE */
+
+.login-page {
+    width: 360px;
+    margin: auto;
+    position: relative;
+    margin-top: 110px;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 46px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 16px;
+    padding: 16px;
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3 ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form .register-form {
+    display: none;
+}
+

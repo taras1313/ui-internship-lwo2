@@ -25,7 +25,6 @@ var newInv = [
 
 updateInventory(curInv, newInv);
 ```
-
 Test suits:
 
 The function updateInventory should return an array.
