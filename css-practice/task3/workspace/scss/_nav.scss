@@ -1,0 +1,49 @@
+nav {
+  padding: 22px 8% 26px 8%;
+
+  ul {
+      flex-basis: 51.2%;
+    padding: 14px 0;
+  }
+
+  .burger {
+      display: none;
+      height: 40px;
+      padding: 6px 0;
+      border-radius: 4px;
+      border: 2px solid $colorWhite;
+      width: 50px;
+      
+      .bar {
+          height: 3px;
+          width: 80%;
+          background: white;
+          
+      }
+  }
+    
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    transition: .2s;
+    position: relative;
+
+    &:hover {
+      color: $yellowColor;
+      transition: .2s;
+    }
+
+    &:hover::after {
+      @include underscore ($yellowColor, 10px, 10px, 100%, absolute);
+    }
+
+    i {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@import 'nav-resp';

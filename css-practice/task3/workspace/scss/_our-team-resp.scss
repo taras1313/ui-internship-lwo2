@@ -1,0 +1,44 @@
+@media screen and (max-width: 1024px) {
+  section.our-team {
+
+    .pic-holder {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .employee {
+      flex-basis: 60%;
+      margin-bottom: 20px;
+    }
+  }
+    
+    .brands {
+        margin-top: 0;
+        padding: 32px 0;
+        
+        img {
+            padding: 0 2%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .brands {
+        overflow: hidden;
+        img {
+                width: 150%;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .brands {
+        overflow: hidden;
+        img {
+                width: 206%;
+        }
+        
+    }
+}

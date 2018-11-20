@@ -1,0 +1,16 @@
+@media screen and (max-width: 1024px) {
+  .comment {
+    padding: 48px 0 40px;
+
+    p {
+      line-height: 3rem;
+      font-size: 1.6rem;
+    }
+  }
+  
+  .message {
+    display: none;
+  }
+
+  
+}

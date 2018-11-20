@@ -1,0 +1,62 @@
+.blog-container {
+  padding-top: 6px;
+    padding-left: 8.2%;
+    padding-right: 8.2%;
+
+  .blog-item {
+    flex-basis: 32%;
+
+    p {
+      margin-top: 12px;
+    }
+  }
+
+  .blog-img {
+    margin-bottom: 10px;
+    position: relative;
+
+    .date {
+      width: 60px;
+      height: 70px;
+      background: $greenColor;
+      position: absolute;
+      bottom: 14px;
+      left: -8px;
+      padding: 4px;
+    }
+
+    span {
+      display: block; 
+      color: $colorWhite;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .date-num {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .month {
+      font-family: $pFont;
+      font-size: 15px;
+
+    }
+  }
+
+  .hr {
+    margin-top: 16px;
+    margin-bottom: 14px;
+  }
+
+  .icons {
+    word-spacing: 3px;
+
+    .view {
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
+}
+
+@import 'blog-resp'

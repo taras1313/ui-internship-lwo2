@@ -1,0 +1,42 @@
+
+.gallery {
+    
+  .g-item {
+    flex-basis: 25%;
+    
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.layered  {
+    position: relative;
+    
+    &:hover .invisible {
+        @include hovered;
+    }
+    
+    .hidden-item {
+       p {
+        margin: 0;
+        color: $colorWhite;
+        font-weight: 400;
+       }
+
+        img {
+            width: auto;
+            margin-bottom: 12px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h5 {
+            margin-bottom: 6px;
+        } 
+    }
+}
+
+@import 'portfolio-resp'

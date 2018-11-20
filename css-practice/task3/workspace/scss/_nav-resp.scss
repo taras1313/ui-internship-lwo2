@@ -1,0 +1,12 @@
+@media screen and (max-width: 1024px) {
+    nav {
+        ul.disp-flex {
+            display: none;
+        }
+        
+        .burger {
+            display: flex;
+        }
+    }
+     
+}

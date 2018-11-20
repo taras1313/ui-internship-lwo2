@@ -1,0 +1,38 @@
+@media screen and (max-width: 1024px) {
+    .about-us {
+        
+        .pic-holder {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            flex-direction: row;
+            margin-bottom: 26px;
+        }
+        
+        .hover-effect {
+            width: 30%;    
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+            .hover-effect {
+                width: 65%;
+                
+                &:not(:last-child) {
+                display: none;
+//                disp-none becouse here will be smth like slider
+                }
+            }
+    }
+    
+    .stats-holder {
+        flex-wrap: wrap;
+        .stat-item {
+            flex-basis: 50%;
+            flex-grow: 1;
+            padding: 40px 10px 50px 10px;
+            border: 1px solid white;
+        }
+    }
+}

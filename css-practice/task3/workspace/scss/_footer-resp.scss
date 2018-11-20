@@ -1,0 +1,60 @@
+@media screen and (max-width: 1024px) {
+    footer {
+        .contacts {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cont-block {
+            flex-basis: 80%;
+
+            .medias {
+                display: block;
+                margin-left: 0;
+                margin-top: 10px;
+                word-spacing: 10px;     
+            }
+        }
+        
+        .blogs {
+            padding-left: 0;
+            flex-basis: 80%;
+            
+            .bl-item {
+                clear: both;
+                display: table;
+            }
+            
+            .bl-content {
+                padding-top: 0;
+            }
+        }
+        
+        .insta {
+            display: none;
+
+        }
+        
+        .copyright {
+           padding-top: 0;
+            
+            h4 {
+            font-size: 1.3rem;
+        } 
+        }
+        
+
+        form {
+            input[type=text]{
+                width: 80%;
+                margin-bottom: 16px;
+            }
+
+            button {
+                width: 60%;
+                margin-bottom: 16px;
+            }
+        }
+        
+    }
+}

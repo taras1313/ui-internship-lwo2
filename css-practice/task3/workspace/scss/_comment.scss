@@ -1,0 +1,12 @@
+.customer-comment {
+    padding-top: 294px;
+    background: $colorWhite;
+    margin-bottom: 60px;
+    
+    .message-text {
+        flex-basis: 67%;
+        padding-top: 32px;
+    }
+}
+
+@import 'comment-resp';

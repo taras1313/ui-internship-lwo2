@@ -1,0 +1,30 @@
+@media screen and (max-width: 1024px) {
+    .our-customers {
+       .cust-container {
+        justify-content: center;
+        
+        .cust-item {
+            flex-basis: 90%;
+        }
+    } 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cust-item {
+        text-align: center;
+        
+        img {
+            margin-left: 0;
+            float: none;
+        }
+        
+        .name-text {
+            margin-left: 0;
+        }
+        
+        .underscore {
+           margin: auto;
+        }
+    }
+}

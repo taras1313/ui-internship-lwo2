@@ -1,0 +1,50 @@
+.our-service {
+  padding-top: 14px;
+}
+
+.work-description {
+  margin-bottom: 110px;
+  padding: 0 8.3%;
+  
+  .img-holder {
+      height: fit-content;
+  }
+  
+  .workflow-info {
+      height: fit-content;
+      flex-basis: 50%;
+      margin-left: 30px;
+  }
+}
+
+.accordion {
+    margin-bottom: 10px;
+    
+    .activity {
+        padding: 12px 14px;
+        border: 1px solid #e5e5e5;
+
+
+        h4 {
+            padding-left: 16px;
+            padding-top: 8px;
+        }
+    }
+
+    p.descr-p {
+        margin: 0;
+        padding: 16px 18px 20px;
+        border: 1px solid #e5e5e5;
+        border-top: 0;
+    }
+
+    i.fas {
+        font-size: 24px;
+        margin-right: 4px;
+        margin-top: 4px;
+        color: #ccc;
+    }
+}
+
+
+@import 'service-resp';
