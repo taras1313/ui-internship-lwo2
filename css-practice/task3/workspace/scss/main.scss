@@ -1,0 +1,35 @@
+$redColor: #f38181;
+$greenColor: #95e1d3;
+$yellowColor: #fce38a;
+$colorWhite: white;
+$grayColor: #ccc;
+$mainFont: 'Montserrat', sans-serif;
+$italicFont: 'Kaushan Script', cursive;
+$pFont: 'Roboto', sans-serif;
+
+
+@import 'mixins';
+@import 'common';
+
+
+@import 'nav';
+@import 'header';
+
+@import 'about-us';
+@import 'services';
+@import 'design';
+
+@import 'service';
+@import 'feedback';
+@import 'our-team';
+@import 'portfolio';
+@import 'comment';
+@import 'our-customers';
+@import 'blog';
+@import 'map';
+
+@import 'footer';
+
+
+
+

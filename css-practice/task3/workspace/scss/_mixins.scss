@@ -1,0 +1,14 @@
+@mixin underscore ($color, $margin-t: 10px, $margin-b: 10px, $w: 100%, $pos: unset) {
+  content: '';
+  display: block;
+  position: $pos;
+  background: $color;
+  width: $w;
+  height: 3px;
+  margin: $margin-t auto $margin-b;
+}
+
+@mixin hovered {
+    opacity: 1;
+    transition: .3s
+}

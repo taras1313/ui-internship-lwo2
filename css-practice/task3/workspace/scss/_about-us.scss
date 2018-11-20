@@ -1,0 +1,36 @@
+.about-us {
+
+
+  .pic-holder {
+    margin-bottom: 106px;
+  }
+}
+
+.stats {
+  background: $greenColor;
+  color: $colorWhite;
+
+  .stat-item {
+    flex-basis: 20%;
+    padding-top: 70px;
+    padding-bottom: 84px;
+    border-right: 1px solid $colorWhite;
+  }
+
+  .stat-item:first-child {
+    border-left: 1px solid $colorWhite;
+  }
+
+  span {
+    font-size: 7.2rem;
+  }
+
+  h5 {
+    font-weight: 400;
+    padding-top: 10px;
+  }
+
+}
+
+
+@import 'about-us-resp'

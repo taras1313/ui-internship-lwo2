@@ -1,0 +1,40 @@
+section.our-team {
+  padding-top: 94px;
+
+  p {
+    margin-top: 8px;
+  }
+  
+  h4 {
+    padding-top: 24px;
+  }
+}
+
+.ref {
+    background: $yellowColor;
+    padding: 10px 16px;
+    border: .5px solid $redColor;
+    color: $redColor;
+    font-size: 26px;
+    transition: .3s;
+    
+    &:hover {
+        background: $redColor;
+        color: $yellowColor;
+        transition: .3s;
+    }
+}
+
+.brands {
+margin-top: 24px;    
+background: #f8f8f8;
+padding: 52px 0 50px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+        padding: 0 8%;
+    }
+}
+
+@import 'our-team-resp';

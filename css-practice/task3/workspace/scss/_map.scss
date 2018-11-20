@@ -1,0 +1,17 @@
+.map {
+  background-image: url(../img/map.png);
+  padding: 58px 0 14px;
+
+  h2 {
+    color: $redColor;
+    font-size: 24px;
+
+    &::after {
+      margin-top: 15px;
+    }
+  }
+
+  .spot {
+    margin-bottom: 8px;
+  }
+}

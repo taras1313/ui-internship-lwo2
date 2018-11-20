@@ -1,0 +1,40 @@
+@media screen and (max-width: 1024px) {
+    .services {
+        padding: 60px 0;
+    }
+    
+    .technologies {
+        padding: 24px 38px 24px 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .technologies {
+        
+        .skillbox {
+            flex-basis: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .technologies {
+        padding: 24px;
+        padding-top: 0;
+        .skillbox {
+            flex-basis: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+            
+            img {
+                float: none;
+                margin: 15px 0
+            }
+            
+            div {
+                margin-left: 0;
+            }
+        }
+    }
+}

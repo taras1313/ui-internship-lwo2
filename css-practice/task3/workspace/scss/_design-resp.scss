@@ -1,0 +1,23 @@
+@media screen and (max-width: 1024px) {
+    
+    .design {
+        height: 498px;
+        background-repeat: no-repeat;
+        background-size: 1032px;
+        padding-top: 38px;
+        
+            .common-title {
+                h2::after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .design {
+        padding-top: 18px;
+        background-size: 880px;
+    }
+}
+

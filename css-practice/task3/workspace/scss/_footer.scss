@@ -1,0 +1,118 @@
+footer {
+  background: #f8f8f8;
+  padding-top: 64px;
+
+    h4 {
+        font-size: 1.3rem;
+    }    
+    
+  .contacts {
+    padding-left: 8.2%;
+    padding-right: 8.2%;
+  }
+
+  .cont-block {
+    flex-basis: 39%;
+    h2 {
+      color: #ccc;
+      font-size: 4.6rem;
+      margin-bottom: 24px;
+    }
+
+    .subscribers {
+      margin: 42px 0 12px 0;
+    }
+
+    span {
+      font-family: $mainFont;
+      font-size: 1.8rem;
+      color: black;
+    }
+
+    .hr {
+      margin: 0;
+    }
+
+    .medias {
+      word-spacing: 11px;
+      margin-left: 20px;
+    }
+  }
+
+  form {
+    padding-top: 15px;
+    word-spacing: -4px;
+    input[type=text] {
+      height: 40px;
+      width: 50%;
+      font-size: 1.5rem;
+      font-style: italic;
+      padding-left: 10px;
+    }
+
+    button {
+      width: fit-content;
+      color: $colorWhite;
+      border: 0;
+      background: $greenColor;    
+      padding: 12px 7.2% 11px 7.2%;
+    }
+  }
+}
+
+
+
+.blogs {
+  flex-basis: 32%;
+  padding: 12px 0 0 6px;
+    
+    p {
+        font-size: 1.3rem;
+    }    
+
+  img {
+    float: left;
+  }
+
+  .bl-item {
+    margin-bottom: 30px;
+  }
+
+  .bl-content {
+    margin-left: 138px;
+    padding-top: 18px;
+
+    h4 {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-top: 6px;
+    }
+  }
+}
+
+.insta {
+  padding: 12px 0 0 6px;    
+  flex-basis: 23%;
+      
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+
+.copyright {
+  padding: 20px 0;
+
+    .hr {
+    margin: 20px 0;
+  }
+    
+  span {
+    color: $redColor;
+  }   
+}
+
+
+@import 'footer-resp';

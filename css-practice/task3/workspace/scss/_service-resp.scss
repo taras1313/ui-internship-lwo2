@@ -1,0 +1,31 @@
+@media screen and (max-width: 1024px) {
+  
+  .work-description {
+    flex-wrap: wrap;
+    justify-content: center;
+      margin-bottom: 60px;
+
+    .img-holder {
+      flex-basis: 75%;
+      margin-bottom: 30px;
+    }
+
+    .workflow-info {
+      flex-basis: 75%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-description {
+    
+    .img-holder {
+      flex-basis: 90%;
+    }
+
+    .workflow-info {
+      flex-basis: 90%;
+    }
+  }
+}

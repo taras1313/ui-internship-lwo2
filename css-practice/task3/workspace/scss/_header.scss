@@ -1,0 +1,75 @@
+header {
+  width: 100%;
+  color: $colorWhite;
+  background-image: url(../img/header-bg-eagle.png);
+  background-attachment: fixed;
+
+  h3 {
+    font-size: 5vw;
+    font-family: $italicFont;
+     padding-top: 115px;
+    padding-top: 8%;
+  }
+
+  h2 {
+    font-size: 10.5vw;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    padding: 2% 0;
+    max-width: 56%;
+    margin: auto;
+    line-height: 9.8vw;
+    letter-spacing: -6px;
+
+    &::after {
+      @include underscore ($colorWhite, 54px, 20px, 60px, unset);
+    }
+  }
+
+  .learn-more {
+    width: fit-content;
+    margin: auto;
+    padding: 8px 26px;
+    font-weight: 700;
+    border: 3px solid $colorWhite;
+    margin-bottom: 158px;
+      transition: .3s;
+      
+      &:hover {
+          transition: .3s;
+          background: $colorWhite;
+          color: $redColor;
+      }
+  }
+    .big {
+      font-size: 2.4rem;
+    } 
+}
+
+.slider {
+  padding-bottom: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+
+  .item {
+    flex-basis: 22.4%;
+      
+     &:hover .loaded {
+        background: $redColor;
+         transition: .3s
+    }
+
+    .loader {
+      background: $colorWhite;
+      height: 3px;
+      margin-bottom: 18px;
+    }
+  }
+    .loaded {
+      height: 3px;
+      width: 26%;
+      transition: .3s
+    }
+}
+
+@import 'header-resp'

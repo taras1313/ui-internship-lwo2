@@ -1,0 +1,42 @@
+@media screen and (max-width: 1024px) {
+    header {
+        background-position: center;
+        
+        h2 {
+           letter-spacing: 3px;
+            max-width: 90%;
+            line-height: 12vw;
+            
+            &::after {
+                margin-top: 6vw;
+            }
+        }
+        
+     
+        .big {
+            display: none;
+        }
+        
+        .learn-more {
+            margin-bottom: 10vw;
+        }
+        
+        .slider {
+            padding-bottom: 38px;
+            .item {
+                flex-basis: 25%;
+            }
+            
+            .loaded {
+                width: 34%;
+            }
+        }
+        
+    }
+    
+    .small {
+            font-size: 1.4rem;
+            
+        }
+}
+

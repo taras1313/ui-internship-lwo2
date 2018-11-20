@@ -1,0 +1,24 @@
+@media screen and (max-width: 1024px) {
+    .blog-container {
+        flex-wrap: wrap;
+        
+        .blog-item {
+            flex-basis: 45%;
+        }
+    }
+    
+    .blog-container .blog-item:last-child {
+        display: none; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .blog-item {
+            flex-basis: 90%;
+        }
+    }
+}

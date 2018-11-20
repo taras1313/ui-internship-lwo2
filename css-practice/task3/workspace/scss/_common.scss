@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: $mainFont;
+}
+
+p {
+  color: #999999;
+  font-family: $pFont;
+  font-size: 1.5rem;
+  line-height: 24px;
+}
+
+.m-width-1200 {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+// usual classes
+
+.w-100 {
+    width: 100%;
+}
+
+.m-width-1200 {
+  max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disp-block {
+  display: block;
+}
+
+.disp-none {
+  display: none;
+}
+
+.disp-i-block {
+  display: inline-block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.heading-big {
+  font-size: 3rem;
+  font-weight: 700;
+  word-spacing: -3px;
+}
+
+.italic-text {
+  font-size: 2.4rem;
+  font-family: $italicFont;
+}
+
+.f-size-14 {
+  font-size: 1.4rem;
+}
+
+.mar-bottom-98 {
+    margin-bottom: 98px;
+}
+
+.mar-bottom-88 {
+    margin-bottom: 88px;
+}
+
+.mar-bottom-38 {
+    margin-bottom: 38px;
+}
+
+.padd-x-10 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.padd-top-106 {
+    padding-top: 106px;
+}
+
+.padd-top-86 {
+    padding-top: 86px;
+}
+
+.small {
+    font-size: 1.8rem;
+    color: $colorWhite;
+}
+//add padd 8.2
+.disp-flex {
+    display: flex;
+}
+
+.just-between {
+    justify-content: space-between;
+}
+
+.just-center {
+    justify-content: center;
+}
+
+.align-i-center {
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+//usual block
+
+.hr {
+  background: #e5e5e5;
+  height: 1px;
+  flex-basis: 100%;
+  margin: 34px 0 46px;
+}
+
+.common-title {
+    h3 {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  h2 {
+    &::after {
+      @include underscore ($redColor, 32px, 42px, 60px, $pos: unset);
+    
+    }
+  }
+}
+
+// common hovers
+
+
+
+.hover-effect {
+    position: relative;
+    transition: .3s;
+    
+    &:hover {
+        box-shadow: 10px 10px $greenColor;
+        transition: .3s;
+        transform: translate(-10px, -12px);
+    }
+    
+    &:hover .invisible {
+        @include hovered
+    }
+    
+}
+
+.invisible {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//remove all hidden items classes
+
+@import 'common-resp';
