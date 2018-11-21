@@ -7,7 +7,7 @@ header {
   h3 {
     font-size: 5vw;
     font-family: $italicFont;
-     padding-top: 115px;
+    padding-top: 115px;
     padding-top: 8%;
   }
 
@@ -61,12 +61,12 @@ header {
 
     .loader {
       background: $colorWhite;
-      height: 3px;
+      height: 2px;
       margin-bottom: 18px;
     }
   }
     .loaded {
-      height: 3px;
+      height: 2px;
       width: 26%;
       transition: .3s
     }
