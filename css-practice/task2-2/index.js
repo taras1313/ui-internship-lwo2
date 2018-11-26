@@ -11,10 +11,7 @@
       hiddenMenu.classList.add('d-none');
     }
   };
-
-
   // !!!!code above was cloned with layout from A Kostyk. Below is my code.
-
   // tabs
 
   const tabsHeading = document.querySelector('.info-text-items h2');
@@ -40,11 +37,11 @@
 
   let prevActive = tabs[0];
 
-  infoButtons.onclick = (e) => {
-    if(e.target.tagName === 'BUTTON') {
+  infoButtons.addEventListener('click', (e) => {
+    if(e.target.classList.contains('btn-info')) {
       const indexOfTab = [...tabs].indexOf(e.target);
-      tabsHeading.classList.toggle('opacity-0');
-      tabsP.classList.toggle('opacity-0');
+      tabsHeading.classList.toggle('hide-el');
+      tabsP.classList.toggle('hide-el');
       prevActive.classList.remove('current');
       tabs[indexOfTab].classList.add('current');
       prevActive = tabs[indexOfTab]
@@ -52,12 +49,11 @@
       setTimeout(() => {
         tabsHeading.innerText = tabsContent[indexOfTab].heading;
         tabsP.innerText = tabsContent[indexOfTab].paragraph;
-        tabsHeading.classList.toggle('opacity-0');
-        tabsP.classList.toggle('opacity-0');
+        tabsHeading.classList.toggle('hide-el');
+        tabsP.classList.toggle('hide-el');
       }, 200)
     }
-  } 
-
+  })
 
 // forms
 
@@ -90,8 +86,8 @@
       allInputs.forEach((el) => {
         if (el.value == '') {
           el.parentNode.querySelector('.tooltip').classList.add('d-block');
-          el.nextElementSibling.nextElementSibling.style.fontSize = '18px';
-          el.nextElementSibling.style.fontSize = '0';
+          el.nextElementSibling.nextElementSibling.classList.add('font-18');
+          el.nextElementSibling.classList.add('font-0');
         }
       })
     }
@@ -100,15 +96,23 @@
   const blurHandler = function(e) {
     e.target.onblur = function() {
       const currentElem = e.target.getAttribute('name');
+      
       if (currentElem  && !this.value.match(REGEXP[currentElem].reg)) {
-        this.nextElementSibling.nextElementSibling.style.fontSize = '18px';
-        this.nextElementSibling.style.fontSize = '0';
+        this.setAttribute('id', 'border-red');
+        this.nextElementSibling.nextElementSibling.classList.add('font-18');
+        this.nextElementSibling.nextElementSibling.classList.remove('font-0');
+        this.nextElementSibling.classList.add('font-0');
+        this.nextElementSibling.classList.remove('font-18');
         this.setAttribute('valid', '');
         this.parentNode.querySelector('.tooltip').classList.add('d-block');
+        
       } else {
-          if(this.tagName !== 'BUTTON') {
-            this.nextElementSibling.style.fontSize = '18px';
-            this.nextElementSibling.nextElementSibling.style.fontSize = '0';
+          if(this['type'] !== 'submit') {
+            this.setAttribute('id', 'border-green')
+            this.nextElementSibling.classList.add('font-18');
+            this.nextElementSibling.classList.remove('font-0');
+            this.nextElementSibling.nextElementSibling.classList.add('font-0');
+            this.nextElementSibling.nextElementSibling.classList.remove('font-18');
             this.setAttribute('valid', true)
             this.parentNode.querySelector('.tooltip').classList.remove('d-block');
         }
@@ -117,7 +121,7 @@
   }
 
   forms.forEach((el) => {
-    el.onsubmit = submitHandler;
+    el.addEventListener('submit', submitHandler);
     el.addEventListener('blur', blurHandler, true)
   })
 })()

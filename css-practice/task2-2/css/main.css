@@ -2,6 +2,7 @@
   border: none;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -15,17 +16,20 @@ a {
 /*classes for js*/
 
 
-
-.opacity-0 {
+.hide-el {
   opacity: 0;
   transition: .2s;
 }
+
 
 form i {
   font-size: 0;
   transition: .3s;
   cursor: pointer;
 }
+
+
+
 
 .fa-check-circle {
   color: #649e64;
@@ -36,24 +40,36 @@ form i {
   position: relative;
 }
 
-.fa-exclamation-circle:hover, .fa-check-circle:hover {
-  transform: scale(1.2);
+.fa-exclamation-circle:hover .tooltip{
+  display: block;
+  opacity: 1;
+  transition: .3s;
   
 }
 
+#border-red {
+  border-bottom: 1px solid rgba(220, 63, 58, .3);
+}
 
+#border-green {
+  border-bottom: 1px solid rgba(98, 159, 98, 0.3);
+}
 
 .tooltip {
   display: none;
+  opacity: 0;
+  transition: .3s;
   position: absolute;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
-  font-size: 14px;
+  background-color: white;
+  color: black;
+  border: 1px solid hsl(2, 70%, 55%);
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
   line-height: 1.2;
   padding: 8px 14px;
   border-radius: 3px;
-  top: -37px;
-  right: 22px;
+  top: -34px;
+  right: 15px;
   width: max-content;
 }
 
@@ -63,9 +79,17 @@ form i {
 
 
 
-.fa-exclamation-circle:hover .tooltip {
-  display:block;
+
+.font-18 {
+  font-size: 18px;
+  transition: .3s;
 }
+
+.font-0 {
+  font-size: 0;
+  transition: .3s;
+}
+
 
 /*_____*/
 
