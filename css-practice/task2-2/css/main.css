@@ -54,6 +54,7 @@ form i {
   border-radius: 3px;
   top: -37px;
   right: 22px;
+  width: max-content;
 }
 
 .d-block {
