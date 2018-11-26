@@ -19,6 +19,7 @@
 
   const tabsHeading = document.querySelector('.info-text-items h2');
   const tabsP = document.querySelector('.info-text-items p');
+  const infoButtons = document.querySelector('.info-button');
   const tabs = document.querySelectorAll('.btn-info');
   const tabsContent = {
     0: {
@@ -39,24 +40,26 @@
 
   let prevActive = tabs[0];
 
-  for (let i = 0; i < tabs.length; i++) {
-    tabs[i].onclick = () => {
+  infoButtons.onclick = (e) => {
+    if(e.target.tagName === 'BUTTON') {
+      const indexOfTab = [...tabs].indexOf(e.target);
       tabsHeading.classList.toggle('opacity-0');
       tabsP.classList.toggle('opacity-0');
       prevActive.classList.remove('current');
-      tabs[i].classList.add('current');
-      prevActive = tabs[i]
+      tabs[indexOfTab].classList.add('current');
+      prevActive = tabs[indexOfTab]
 
       setTimeout(() => {
-        tabsHeading.innerText = tabsContent[i].heading;
-        tabsP.innerText = tabsContent[i].paragraph;
+        tabsHeading.innerText = tabsContent[indexOfTab].heading;
+        tabsP.innerText = tabsContent[indexOfTab].paragraph;
         tabsHeading.classList.toggle('opacity-0');
         tabsP.classList.toggle('opacity-0');
       }, 200)
     }
-  }
+  } 
 
 
+// forms
 
   const REGEXP = {
     user_name: {
@@ -73,17 +76,15 @@
     },
     message: {
       reg: /.{1,250}$/ 
-      // /^[a-zA-Z ]{1,250}$/,
     }
   }
 
-  const forms = Array.from(document.forms);
+  const forms = [...document.forms];
+  
   const submitHandler = function(e) {
-
-    const allInputs = Array.from(this.querySelectorAll('input'));
-    const inputs = this.querySelectorAll('[valid]')
-    const invalid = [...inputs].filter(el => !Boolean(el.getAttribute('valid')));
-    console.log(invalid);
+    const allInputs = [...this.querySelectorAll('input')];
+    const inputs = [...this.querySelectorAll('[valid]')];
+    const invalid = inputs.filter(el => !Boolean(el.getAttribute('valid')));
     if (allInputs.some(el => el.value == '') || invalid.length !== 0) {
       e.preventDefault();
       allInputs.forEach((el) => {
@@ -92,7 +93,6 @@
           el.nextElementSibling.nextElementSibling.style.fontSize = '18px';
           el.nextElementSibling.style.fontSize = '0';
         }
-
       })
     }
   }
@@ -100,18 +100,18 @@
   const blurHandler = function(e) {
     e.target.onblur = function() {
       const currentElem = e.target.getAttribute('name');
-      if (!this.value.match(REGEXP[currentElem].reg)) {
+      if (currentElem  && !this.value.match(REGEXP[currentElem].reg)) {
         this.nextElementSibling.nextElementSibling.style.fontSize = '18px';
         this.nextElementSibling.style.fontSize = '0';
         this.setAttribute('valid', '');
         this.parentNode.querySelector('.tooltip').classList.add('d-block');
-      }
-      else {
-        this.nextElementSibling.style.fontSize = '18px';
-        this.nextElementSibling.nextElementSibling.style.fontSize = '0';
-        this.setAttribute('valid', true)
-        this.parentNode.querySelector('.tooltip').classList.remove('d-block');
-
+      } else {
+          if(this.tagName !== 'BUTTON') {
+            this.nextElementSibling.style.fontSize = '18px';
+            this.nextElementSibling.nextElementSibling.style.fontSize = '0';
+            this.setAttribute('valid', true)
+            this.parentNode.querySelector('.tooltip').classList.remove('d-block');
+        }
       }
     }
   }
@@ -120,5 +120,4 @@
     el.onsubmit = submitHandler;
     el.addEventListener('blur', blurHandler, true)
   })
-
 })()
