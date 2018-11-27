@@ -938,6 +938,8 @@ input, textarea {
   font-size: 14px;
   font-weight: 400;
     color: #bdbdbd;
+    padding: 10px;
+    border-bottom: 1px solid #f3f3f3;
 
 }
 
@@ -992,7 +994,7 @@ textarea {
   justify-content: space-around;
 }
 .contact-container .contact-form form .input_name, .contact-container .contact-form form .input_mail, .contact-container .contact-form form .input_psw {
-  border-bottom: 2px solid #f3f3f3;
+  /*border-bottom: 2px solid #f3f3f3;*/
   padding: 5px 6px;
   margin-bottom: 30px;
   position: relative;
