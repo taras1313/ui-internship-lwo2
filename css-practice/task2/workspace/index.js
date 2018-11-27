@@ -74,5 +74,5 @@ about.onmouseleave = (e) => {
 
 const subscribeFrom = document.querySelector('form');
 subscribeFrom.addEventListener('blur', function(e) {
-  console.log(e.target);
-},true);
+  // console.log(e.target);
+}, true);
