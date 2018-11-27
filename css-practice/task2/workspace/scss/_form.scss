@@ -42,6 +42,14 @@
       }
     }
 
+    .border-success {
+      border: 1px solid #28cc40;
+    }
+
+    .border-error {
+      border: 1px solid $red_color;
+    }
+
     img {
       position: absolute;
       right: 29px;
