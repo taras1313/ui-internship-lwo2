@@ -98,30 +98,31 @@
   };
 
   const blurHandler = function(e) {
-    e.target.onblur = function() {
-      const currentElem = e.target.getAttribute('name');
-
-      if (currentElem && !this.value.match(REGEXP[currentElem].reg)) {
-        this.setAttribute('id', 'border-red');
-        this.nextElementSibling.nextElementSibling.classList.add('font-18');
-        this.nextElementSibling.nextElementSibling.classList.remove('font-0');
-        this.nextElementSibling.classList.add('font-0');
-        this.nextElementSibling.classList.remove('font-18');
-        this.setAttribute('valid', '');
-        this.parentNode.querySelector('.tooltip').classList.add('d-block');
+    const currentInp = e.target;
+      const currentElem = currentInp.getAttribute('name');
+      
+      if (currentElem  && !currentInp.value.match(REGEXP[currentElem].reg)) {
+        currentInp.setAttribute('id', 'border-red');
+        currentInp.nextElementSibling.nextElementSibling.classList.add('font-18');
+        currentInp.nextElementSibling.nextElementSibling.classList.remove('font-0');
+        currentInp.nextElementSibling.classList.add('font-0');
+        currentInp.nextElementSibling.classList.remove('font-18');
+        currentInp.setAttribute('valid', '');
+        currentInp.parentNode.querySelector('.tooltip').classList.add('d-block');
+        
       } else {
-        if (this['type'] !== 'submit') {
-          this.setAttribute('id', 'border-green')
-          this.nextElementSibling.classList.add('font-18');
-          this.nextElementSibling.classList.remove('font-0');
-          this.nextElementSibling.nextElementSibling.classList.add('font-0');
-          this.nextElementSibling.nextElementSibling.classList.remove('font-18');
-          this.setAttribute('valid', true);
-          this.parentNode.querySelector('.tooltip').classList.remove('d-block');
+          if(currentInp['type'] !== 'submit') {
+            currentInp.setAttribute('id', 'border-green')
+            currentInp.nextElementSibling.classList.add('font-18');
+            currentInp.nextElementSibling.classList.remove('font-0');
+            currentInp.nextElementSibling.nextElementSibling.classList.add('font-0');
+            currentInp.nextElementSibling.nextElementSibling.classList.remove('font-18');
+            currentInp.setAttribute('valid', true)
+            currentInp.parentNode.querySelector('.tooltip').classList.remove('d-block');
         }
       }
-    };
   };
+  
 
   forms.forEach((el) => {
     el.addEventListener('submit', submitHandler);
