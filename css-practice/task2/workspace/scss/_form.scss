@@ -3,6 +3,7 @@
   padding-top: 6.3%;
   padding-bottom: 5.8%;
   text-align: center;
+  // position: relative;
   
   h3 {
     color: $white_color;
@@ -16,11 +17,22 @@
     justify-content: space-between;
     position: relative;
 
+    .show-tooltip:hover .tooltip {
+      opacity: 1;
+        transition: .2s;
+    }
+
+    .input-box {
+      width: 23%; 
+      position: relative;
+    }
+
     .info_inp {
       border: 1px solid $white_color;
       background-color: #464c77;
       border-radius: 3px;
-      width: 23%;
+      // width: 23%;
+      width: 100%;
       height: 48px;
       color: #f6f5f3;
       font-size: 16px;
@@ -30,6 +42,8 @@
       &::placeholder {
         color: #f6f5f3;
       }
+
+      
 
       &[type=submit] {
         color: $white_color;
@@ -41,6 +55,57 @@
         padding: 0;
       }
     }
+
+    .disabled {
+      cursor: not-allowed; 
+      opacity: 0.7;
+    }
+
+    .border-success {
+      -webkit-box-shadow: 0px 0px 20px 3px #28cc40;
+      -moz-box-shadow: 0px 0px 20px 3px #28cc40;
+      box-shadow: 0px 0px 20px 3px #28cc40;
+    }
+
+    .border-error {
+      -webkit-box-shadow: 0px 0px 20px 3px $red_color;
+      -moz-box-shadow: 0px 0px 20px 3px $red_color;
+      box-shadow: 0px 0px 20px 3px $red_color;
+    }
+
+    .tooltip {
+      background: $red_color;
+      border: 1px solid $red_color;
+      width: max-content;
+      border-radius: 5px;
+      padding: 7px 10px;
+      position: absolute;
+      color: white;
+      z-index: 2;
+      top: -48px;
+      left: 14px;
+      opacity: 0;
+      transition: .2s;
+    }
+
+    .show-tooltip {
+      transition: .2s;
+      opacity: 1;
+    }
+    
+    .threeangle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: $red_color;
+      border: 1px solid $red_color;
+      z-index: -1;
+      transform: rotate(45deg);
+      top: 26px;
+      left: 16px;
+      
+    }
+
 
     img {
       position: absolute;

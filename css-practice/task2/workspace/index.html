@@ -137,13 +137,30 @@
       <h5 class="h5_big">NEW FEATURES</h5>
       <h3 class="h3_big">Over 1000 designers are using ...</h3>
 
-      <div class="inputs">
-        <input type="text" placeholder="FULL NAME" class="info_inp">
-        <input type="email" placeholder="YOUR EMAIL" class="info_inp">
-        <input type="password" placeholder="PASSWORD" class="info_inp">
+      <form class="inputs" action="test.php" method="POST" novalidate>
+        <div class="input-box">
+            <input type="text" placeholder="FULL NAME" class="info_inp" pattern="^[a-zA-Z ]{2,25}$">
+            <div class="tooltip">That field shouldn't be empty like your soul
+              <div class="threeangle"></div>
+          </div>
+        </div>  
+        
+        <div class="input-box">
+        <input type="email" placeholder="YOUR EMAIL" class="info_inp" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+        <div class="tooltip">Write correct email, like: yourmail@mail.com
+            <div class="threeangle"></div>
+          </div>
+        </div>  
+
+        <div class="input-box">
+        <input type="password" placeholder="PASSWORD" class="info_inp" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+-]).{6,16}">
+        <div class="tooltip">At least 1 uppercase letter, 1 lowercase, 1 num and 1 spec. char
+            <div class="threeangle"></div>
+          </div>
+        </div>  
         <img src="./images/trial.png" alt="trial 30 days">
-        <input type="submit" value="TRY NOW" class="info_inp cursor-pointer">
-      </div>
+        <button type="submit" class="info_inp cursor-pointer disabled" disabled>TRY NOW</button>
+      </form>
 
       <h6>By Signing up you agree to our <span class="cursor-pointer">terms & Services.</span></h6>
     </div>
