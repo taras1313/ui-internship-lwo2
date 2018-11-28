@@ -19,10 +19,34 @@
 
 .accordion {
     margin-bottom: 10px;
+
+
+    
+
+    // .hide-block {
+    //     height: 0;
+    //     overflow: hidden;
+    //     transition: .4s;
+    // }
+
+    .descr {
+        transition: .4s;
+        height: 0;
+        overflow: hidden;
+        border: 1px solid #e5e5e5;
+        border-top: 0;
+    }
+
+    .show-block {
+        // height: 100px;
+        height: 216px;
+        transition: .4s;
+        overflow: scroll;
+    }
     
     .activity {
         padding: 12px 14px;
-        border: 1px solid #e5e5e5;
+        border: 0.5px solid #e5e5e5;  
 
 
         h4 {
@@ -34,8 +58,7 @@
     p.descr-p {
         margin: 0;
         padding: 16px 18px 20px;
-        border: 1px solid #e5e5e5;
-        border-top: 0;
+        
     }
 
     i.fas {
