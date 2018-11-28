@@ -73,6 +73,30 @@ about.onmouseleave = (e) => {
 // form
 
 const subscribeFrom = document.querySelector('form');
-subscribeFrom.addEventListener('blur', function(e) {
-  // console.log(e.target);
+const formSubmit = subscribeFrom.querySelector('button');
+
+subscribeFrom.addEventListener('keyup', function(e) {
+  const currentElPattern = new RegExp(e.target.getAttribute('pattern'));
+  const inputs = [...subscribeFrom.querySelectorAll('input')];
+  if (currentElPattern.test(e.target.value)) {
+    e.target.classList.add('border-success');
+    e.target.classList.remove('border-error', 'show-tooltip');
+    e.target.parentNode.classList.remove('show-tooltip');
+  } else {
+    if (e.key !== 'Tab') {
+      e.target.classList.remove('border-success');
+      e.target.classList.add('border-error', 'show-tooltip');
+      e.target.parentNode.classList.add('show-tooltip');
+    }
+  }
+
+  if (inputs.every((el) => el.classList.contains('border-success'))) {
+    formSubmit.disabled = false;
+    formSubmit.classList.remove('disabled');
+  } else {
+    formSubmit.disabled = true;
+    formSubmit.classList.add('disabled');
+  }
 }, true);
+
+
