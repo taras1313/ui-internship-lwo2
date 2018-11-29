@@ -396,7 +396,8 @@ header {
     position: relative; }
     .form .inputs .show-tooltip:hover .tooltip {
       opacity: 1;
-      transition: .2s; }
+      transition: .2s;
+      z-index: 2; }
     .form .inputs .input-box {
       width: 23%;
       position: relative; }
@@ -439,7 +440,7 @@ header {
       padding: 7px 10px;
       position: absolute;
       color: white;
-      z-index: 2;
+      z-index: -1;
       top: -48px;
       left: 14px;
       opacity: 0;
