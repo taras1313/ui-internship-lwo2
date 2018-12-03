@@ -20,15 +20,6 @@
 .accordion {
     margin-bottom: 10px;
 
-
-    
-
-    // .hide-block {
-    //     height: 0;
-    //     overflow: hidden;
-    //     transition: .4s;
-    // }
-
     .descr {
         transition: .4s;
         height: 0;
@@ -38,12 +29,17 @@
     }
 
     .show-block {
-        // height: 100px;
         height: 216px;
         transition: .4s;
         overflow: scroll;
+
     }
-    
+
+    .rotate-180 {
+        transform: rotate(180deg);
+        transition: .4s;
+    }
+
     .activity {
         padding: 12px 14px;
         border: 0.5px solid #e5e5e5;  
@@ -66,6 +62,7 @@
         margin-right: 4px;
         margin-top: 4px;
         color: #ccc;
+        transition: .4s;
     }
 }
 

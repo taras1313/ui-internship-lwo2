@@ -19,11 +19,11 @@
     <nav class="just-between disp-flex flex-row flex-nowrap">
       <h1 class="heading-big"><a href="#">MoGo</a></h1>
       <ul class="just-between disp-flex flex-row flex-nowrap">
-        <li><a href="#" class="f-size-14 uppercase" id='test'>About</a></li>
-        <li><a href="#" class="f-size-14 uppercase">Service</a></li>
-        <li><a href="#" class="f-size-14 uppercase">Work</a></li>
-        <li><a href="#" class="f-size-14 uppercase">Blog</a></li>
-        <li><a href="#" class="f-size-14 uppercase">Contact</a></li>
+        <li><a href="#about" class="f-size-14 uppercase" id='test'>About</a></li>
+        <li><a href="#service" class="f-size-14 uppercase">Service</a></li>
+        <li><a href="#portfolio" class="f-size-14 uppercase">Work</a></li>
+        <li><a href="#blog" class="f-size-14 uppercase">Blog</a></li>
+        <li><a href="#contact" class="f-size-14 uppercase">Contact</a></li>
         <li><a href="#" class="f-size-14"><i class="fas fa-shopping-cart"></i></a></li>
         <li><a href="#" class="f-size-14"><i class="fas fa-search"></i></a></li>
       </ul>
@@ -85,7 +85,7 @@
 
   <main>
     <div>
-      <section class="about-us padd-top-86 common-title m-width-1200">
+      <section class="about-us padd-top-86 common-title m-width-1200" id="about">
         <div class="sec-name text-center">
           <h3 class="italic-text">What we do</h3>
           <h2 class="heading-big uppercase">Story about us</h2>
@@ -157,7 +157,7 @@
       </section>
     </div>
 
-    <section class="services common-title">
+    <section class="services common-title" id="service">
       <div class="sec-name text-center">
         <h3 class="italic-text">We work with</h3>
         <h2 class="heading-big uppercase">Amazing Services</h2>
@@ -247,7 +247,7 @@
                 <h4 class="f-size-14 uppercase">Photography</h4>
               </div>
 
-              <i class="fas fa-chevron-up"></i>
+              <i class="fas fa-chevron-down rotate-180"></i>
             </div>
             <div class="descr show-block">
               <p class="descr-p"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -302,19 +302,55 @@
 
     <section class="comment">
       <div class="m-width-1200 comment-holder disp-flex just-between">
-        <div class="back disp-flex align-i-center"><i class="fas fa-angle-left"></i></div>
-        <div class="message">
-          <img src="./img/feedback.png" alt="message icon" class="w-100">
+          <div class="back disp-flex align-i-center"><i class="fas fa-angle-left"></i></div>
+          <div class="all-comments">
+            <div class="overflowed">
+            <div class="slide-items">
+                <div class="message">
+                    <img src="./img/feedback.png" alt="message icon" class="w-100">
+                  </div>
+                  <div class="message-text">
+                    <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
+                    <div class="disp-i-block direction"></div>
+                    <span class="italic-text">Jon Doe</span>
+                  </div>
+            </div> 
+            
+            <div class="slide-items">
+                <div class="message">
+                    <img src="./img/feedback.png" alt="message icon" class="w-100">
+                  </div>
+                  <div class="message-text">
+                    <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
+                    <div class="disp-i-block direction"></div>
+                    <span class="italic-text">Jon Doe</span>
+                  </div>
+    
+                  
+                  
+            </div> 
+    
+            <div class="slide-items">
+                <div class="message">
+                    <img src="./img/feedback.png" alt="message icon" class="w-100">
+                  </div>
+                  <div class="message-text">
+                    <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
+                    <div class="disp-i-block direction"></div>
+                    <span class="italic-text">Jon Doe</span>
+                  </div>
+    
+                  
+                  
+            </div> 
+          </div>
+          </div>
+  
+          <div class="next disp-flex align-i-center"><i class="fas fa-angle-right"></i></div>
         </div>
-        <div class="message-text">
-          <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
-          <div class="disp-i-block direction"></div>
-          <span class="italic-text">Jon Doe</span>
-        </div>
-
-        <div class="next disp-flex align-i-center"><i class="fas fa-angle-right"></i></div>
-      </div>
     </section>
 
     <section class="our-team m-width-1200">
@@ -394,12 +430,10 @@
         </div>
       </div>
     </section>
-
     <section class="brands">
       <img src="./img/brands.png" alt="brands" class="w-100">
     </section>
-
-    <section class="portfolio m-width-1200 padd-top-106">
+    <section class="portfolio m-width-1200 padd-top-106" id="portfolio">
       <div class="sec-name text-center common-title">
         <h3 class="italic-text">What we do</h3>
         <h2 class="heading-big uppercase">some of our work</h2>
@@ -420,8 +454,6 @@
           </div>
           <img src="./img/gallery/man.png" alt="man">
         </div>
-
-
         <div class="layered">
           <div class="invisible uppercase bold">
             <div class="hidden-item text-center">
@@ -498,7 +530,49 @@
 
     <section class="comment customer-comment">
       <div class="m-width-1200 comment-holder disp-flex just-between">
-        <div class="back disp-flex align-i-center"><i class="fas fa-angle-left"></i></div>
+          <div class="back disp-flex align-i-center"><i class="fas fa-angle-left"></i></div>
+          <div class="all-comments">
+            <div class="overflowed">
+            <div class="slide-items">
+                <div class="message">
+                    <img src="./img/woman-pic.png" alt="woman picture">
+                  </div>
+                  <div class="message-text">
+                    <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
+                    <div class="disp-i-block direction"></div>
+                    <span class="italic-text">Joshua Earle</span>
+                  </div>
+            </div> 
+            
+            <div class="slide-items">
+                <div class="message">
+                    <img src="./img/woman-pic.png" alt="woman picture">
+                  </div>
+                  <div class="message-text">
+                    <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
+                    <div class="disp-i-block direction"></div>
+                    <span class="italic-text">Joshua Earle</span>
+                  </div>   
+            </div> 
+            <div class="slide-items">
+                <div class="message">
+                    <img src="./img/woman-pic.png" alt="woman picture">
+                  </div>
+                  <div class="message-text">
+                    <p><i>&#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.&#34;</i></p>
+                    <div class="disp-i-block direction"></div>
+                    <span class="italic-text">Joshua Earle</span>
+                  </div>
+            </div> 
+          </div>
+          </div>
+  
+          <div class="next disp-flex align-i-center"><i class="fas fa-angle-right"></i></div>
+        </div>
+        <!-- <div class="back disp-flex align-i-center"><i class="fas fa-angle-left"></i></div>
         <div class="message">
           <img src="./img/woman-pic.png" alt="woman picture">
         </div>
@@ -509,7 +583,7 @@
           <span class="italic-text">Joshua Earle</span>
         </div>
 
-        <div class="next disp-flex align-i-center"><i class="fas fa-angle-right"></i></div>
+        <div class="next disp-flex align-i-center"><i class="fas fa-angle-right"></i></div> -->
       </div>
     </section>
 
@@ -575,7 +649,7 @@
       </div>
     </section>
 
-    <section class="blog common-title padd-top-106">
+    <section class="blog common-title padd-top-106" id="blog">
       <div class="sec-name text-center">
         <h3 class="italic-text">Our stories</h3>
         <h2 class="heading-big uppercase">Latest blog</h2>
@@ -649,7 +723,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="contact">
     <div class="contacts disp-flex just-between">
       <div class="cont-block">
         <h2>MoGo</h2>
@@ -742,8 +816,10 @@
       <h4 class="f-size-14 text-center">© 2016 MoGo free PSD template by <span>Laaqiq</span></h4>
     </div>
   </footer>
-
+  <script src="navbar.js"></script>
   <script src="accordeon.js"></script>
+  <script src="slider.js"></script>
+  <script src="popup.js"></script>
 </body>
 
 </html>
