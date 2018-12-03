@@ -7,6 +7,10 @@ const prevEvent = {
   el: document.querySelector('.descr'),
 };
 
+/* eslint-disable-next-line */
+/* eslint-disable-next-line */
+const imgInAccordion = document.querySelector('.work-description > .img-holder img');
+
 const accordeonContainer = document.querySelector('.workflow-info');
 const contentToggler = function(currTabContent, currentTab) {
   if (prevEvent.el !== currTabContent) {
@@ -14,6 +18,7 @@ const contentToggler = function(currTabContent, currentTab) {
     /* eslint-disable-next-line  */
     prevEvent.el.parentElement.querySelector('i').classList.remove('rotate-180');
     prevEvent.el = currTabContent;
+    imgInAccordion.setAttribute('src', currentTab.getAttribute('data-img'));
   }
 
   currTabContent.classList.toggle('show-block');

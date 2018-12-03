@@ -427,7 +427,7 @@ header {
   margin-bottom: 110px;
   padding: 0 8.3%; }
   .work-description .img-holder {
-    height: fit-content; }
+    width: 48%; }
   .work-description .workflow-info {
     height: fit-content;
     flex-basis: 50%;
