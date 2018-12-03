@@ -7,7 +7,8 @@
   padding: 0 8.3%;
   
   .img-holder {
-      height: fit-content;
+    //   height: fit-content;
+    width: 48%;
   }
   
   .workflow-info {
@@ -19,10 +20,30 @@
 
 .accordion {
     margin-bottom: 10px;
-    
+
+    .descr {
+        transition: .4s;
+        height: 0;
+        overflow: hidden;
+        border: 1px solid #e5e5e5;
+        border-top: 0;
+    }
+
+    .show-block {
+        height: 216px;
+        transition: .4s;
+        overflow: scroll;
+
+    }
+
+    .rotate-180 {
+        transform: rotate(180deg);
+        transition: .4s;
+    }
+
     .activity {
         padding: 12px 14px;
-        border: 1px solid #e5e5e5;
+        border: 0.5px solid #e5e5e5;  
 
 
         h4 {
@@ -34,8 +55,7 @@
     p.descr-p {
         margin: 0;
         padding: 16px 18px 20px;
-        border: 1px solid #e5e5e5;
-        border-top: 0;
+        
     }
 
     i.fas {
@@ -43,6 +63,7 @@
         margin-right: 4px;
         margin-top: 4px;
         color: #ccc;
+        transition: .4s;
     }
 }
 

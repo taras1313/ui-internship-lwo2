@@ -1,42 +1,81 @@
-
-.gallery {
+.overlay {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-wrap: nowrap;
+    user-select: none;
+      
+      .cont {
+          text-align: center;
+              margin: 0 20px;
+          
+          img {
+              width: 100%;
+          }
+      }
+  }
+  
+  .d-block {
+    display: flex;
     
-  .g-item {
-    flex-basis: 25%;
-    
-
-    img {
-      display: block;
-      width: 100%;
+  }
+  
+  .prev, .next {
+      font-size: 60px;
+      color: #7b7d7d;
+      transition: .2s;
+      
+      &:hover {
+          transform: scale(1.1);
+          color: #c0c3c3;
+          transition: .2s
+      }
+  }
+  
+  .gallery {
+      
+    .g-item {
+      flex-basis: 25%;
+      
+  
+      img {
+        display: block;
+        width: 100%;
+      }
     }
   }
-}
-
-.layered  {
-    position: relative;
-    
-    &:hover .invisible {
-        @include hovered;
-    }
-    
-    .hidden-item {
-       p {
-        margin: 0;
-        color: $colorWhite;
-        font-weight: 400;
-       }
-
-        img {
-            width: auto;
-            margin-bottom: 12px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h5 {
-            margin-bottom: 6px;
-        } 
-    }
-}
-
-@import 'portfolio-resp'
+  
+  .layered  {
+      position: relative;
+      
+      &:hover .invisible {
+          @include hovered;
+      }
+      
+      .hidden-item {
+         p {
+          margin: 0;
+          color: $colorWhite;
+          font-weight: 400;
+         }
+  
+          img {
+              width: auto;
+              margin-bottom: 12px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+  
+          h5 {
+              margin-bottom: 6px;
+          } 
+      }
+  }
+  
+  @import 'portfolio-resp'
