@@ -1,3 +1,5 @@
+/* global document window*/
+
 const imgContainer = document.querySelector('.gallery');
 const parentWithCurrentImg = (node) => {
   while (node.parentElement) {
@@ -8,11 +10,12 @@ const parentWithCurrentImg = (node) => {
   }
 };
 
-const overlayHandler = function (e) {
+const overlayHandler = function(e) {
   const rightParent = parentWithCurrentImg(e.target);
+  /* eslint-disable-next-line  */
   const clickedImgSrc = rightParent.querySelector('.layered>img').getAttribute('src');
   const galleryImgsSrcs = [...document.querySelectorAll('.layered > img')]
-    .map(el => el.getAttribute('src'));
+      .map((el) => el.getAttribute('src'));
 
   const overlay = document.createElement('div');
   overlay.classList.add('overlay', 'd-block');
@@ -32,7 +35,7 @@ const overlayHandler = function (e) {
   let counter = clickedImgIndex;
 
 
-  prev.onclick = function () {
+  prev.onclick = function() {
     const firstImgInArr = counter === 0;
     if (firstImgInArr) {
       counter = galleryImgsSrcs.length - 1;
@@ -40,23 +43,23 @@ const overlayHandler = function (e) {
     } else {
       overayImg.setAttribute('src', galleryImgsSrcs[--counter]);
     }
-  }
+  };
 
-  next.onclick = function () {
+  next.onclick = function() {
     const lastImgInArr = counter === galleryImgsSrcs.length - 1;
     if (lastImgInArr) {
       counter = 0;
       overayImg.setAttribute('src', galleryImgsSrcs[counter]);
     } else {
-      overayImg.setAttribute('src', galleryImgsSrcs[++counter])
+      overayImg.setAttribute('src', galleryImgsSrcs[++counter]);
     }
-  }
-}
+  };
+};
 
-window.onclick = function (e) {
+window.onclick = function(e) {
   if (e.target.classList.contains('overlay')) {
     document.body.removeChild(e.target);
   }
-}
+};
 
 imgContainer.addEventListener('click', overlayHandler);

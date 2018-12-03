@@ -9,9 +9,9 @@ const prevEvent = {
 
 const accordeonContainer = document.querySelector('.workflow-info');
 const contentToggler = function(currTabContent, currentTab) {
-
   if (prevEvent.el !== currTabContent) {
     prevEvent.el.classList.remove('show-block');
+    /* eslint-disable-next-line  */
     prevEvent.el.parentElement.querySelector('i').classList.remove('rotate-180');
     prevEvent.el = currTabContent;
   }
@@ -21,10 +21,11 @@ const contentToggler = function(currTabContent, currentTab) {
 };
 
 accordeonContainer.addEventListener('click', function(e) {
-
   /* i need to check 'el.classList' to avoid errors,
-   becouse if we click on paragraph we will bubble to body, that hasn't a classList */
+   becouse if we click on paragraph we will bubble to body,
+   that hasn't a classList */
 
+  /* eslint-disable-next-line  */
   const currentTab = e.path.find((el) => el.classList && el.classList.contains('activity'));
   if (!currentTab) return;
   const content = currentTab.nextElementSibling;
