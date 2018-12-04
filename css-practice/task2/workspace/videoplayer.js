@@ -2,7 +2,6 @@
 const video = document.querySelector('video');
 const continueVideoButton = document.querySelector('.fa-play-circle');
 const pauseVideoButton = document.querySelector('.fa-pause-circle');
-// const videoHandler = document.querySelector('.video-player');
 const hideElement = 'disp-none';
 
 const hideEl = (el) => {
