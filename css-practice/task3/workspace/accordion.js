@@ -8,7 +8,6 @@ const prevEvent = {
 };
 
 /* eslint-disable-next-line */
-/* eslint-disable-next-line */
 const imgInAccordion = document.querySelector('.work-description > .img-holder img');
 
 const accordeonContainer = document.querySelector('.workflow-info');
