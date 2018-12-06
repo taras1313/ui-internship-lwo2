@@ -1,22 +1,32 @@
 /* global document */
 const sliders = [...document.querySelectorAll('.comment')];
-
+const oneSlideWidth = 33.3;
 let translateX = 0;
+const foundClick = function(target, currentTarget, className) {
+  while (target !== currentTarget) {
+    if (target.classList.contains(className)) {
+      return true;
+    }
+    target = target.parentNode;
+  }
+  return false;
+};
+
 const handleSliderClick = function(e) {
   const allComents = e.currentTarget.querySelector('.overflowed');
   const commentLength = allComents.querySelectorAll('.slide-items').length;
   /* eslint-disable-next-line  */
-  const pressedNext = e.path.indexOf(e.currentTarget.querySelector('.next')) !== -1;
+  const pressedNext = foundClick(e.target, e.currentTarget, 'next');
   /* eslint-disable-next-line  */
-  const pressedPrev = e.path.indexOf(e.currentTarget.querySelector('.back')) !== -1;
-  const lastElemOfSlider = translateX === -33.33333 * (commentLength - 1);
+  const pressedPrev = foundClick(e.target, e.currentTarget, 'back');
+  const lastElemOfSlider = translateX === -oneSlideWidth * (commentLength - 1);
   const firstElemOfSlider = translateX * commentLength === 0;
 
   if (pressedNext) {
-    lastElemOfSlider ? translateX = 0 : translateX -= 33.33333;
+    translateX = lastElemOfSlider ? 0 : translateX -= oneSlideWidth;
   } else if (pressedPrev) {
     /* eslint-disable-next-line  */
-    firstElemOfSlider ? translateX = (commentLength - 1) * -33.33333 : translateX += 33.33333;
+    translateX = firstElemOfSlider ? (commentLength - 1) * -oneSlideWidth : translateX += oneSlideWidth;
   }
   allComents.style.transform = `translateX(${translateX}%)`;
 };

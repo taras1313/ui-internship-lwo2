@@ -8,6 +8,7 @@ const parentWithCurrentImg = (node) => {
     }
     node = node.parentElement;
   }
+  return null;
 };
 
 const overlayHandler = function(e) {
@@ -19,21 +20,30 @@ const overlayHandler = function(e) {
 
   const overlay = document.createElement('div');
   overlay.classList.add('overlay', 'd-block');
-  overlay.innerHTML = `
-    <i class="fas fa-chevron-circle-left prev"></i>
-    <div class="cont">
-      <img class="overay-img" src="${clickedImgSrc}"/>
-    </div>
-    <i class="fas fa-chevron-circle-right next"></i>`;
+  const overayTeplate = `
+  <i class="fas fa-chevron-circle-left prev"></i>
+  <div class="cont">
+    <img class="overay-img" src="${clickedImgSrc}"/>
+  </div>
+  <i class="fas fa-chevron-circle-right next"></i>`;
 
+  overlay.innerHTML = overayTeplate;
   document.body.appendChild(overlay);
+
+  const modalClose = function(e) {
+    if (e.target.classList.contains('overlay')) {
+      document.body.removeChild(e.target);
+      window.removeEventListener('click', modalClose);
+    }
+  };
+
+  window.addEventListener('click', modalClose);
 
   const clickedImgIndex = galleryImgsSrcs.indexOf(clickedImgSrc);
   const prev = overlay.querySelector('.prev');
   const next = overlay.querySelector('.next');
   const overayImg = overlay.querySelector('.overay-img');
   let counter = clickedImgIndex;
-
 
   prev.onclick = function() {
     const firstImgInArr = counter === 0;
@@ -56,10 +66,5 @@ const overlayHandler = function(e) {
   };
 };
 
-window.onclick = function(e) {
-  if (e.target.classList.contains('overlay')) {
-    document.body.removeChild(e.target);
-  }
-};
 
 imgContainer.addEventListener('click', overlayHandler);
