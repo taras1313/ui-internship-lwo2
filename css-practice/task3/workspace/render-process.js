@@ -1,3 +1,4 @@
+/* global document */
 import LatestItem from './latest-blog.js';
 import FooterItem from './footer-blog.js';
 
