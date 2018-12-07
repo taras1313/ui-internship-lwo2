@@ -44,26 +44,28 @@ const overlayHandler = function(e) {
   const next = overlay.querySelector('.next');
   const overayImg = overlay.querySelector('.overay-img');
   let counter = clickedImgIndex;
+  function attachOverlayActionHandlers() {
+    prev.onclick = function() {
+      const firstImgInArr = counter === 0;
+      if (firstImgInArr) {
+        counter = galleryImgsSrcs.length - 1;
+        overayImg.setAttribute('src', galleryImgsSrcs[counter]);
+      } else {
+        overayImg.setAttribute('src', galleryImgsSrcs[--counter]);
+      }
+    };
 
-  prev.onclick = function() {
-    const firstImgInArr = counter === 0;
-    if (firstImgInArr) {
-      counter = galleryImgsSrcs.length - 1;
-      overayImg.setAttribute('src', galleryImgsSrcs[counter]);
-    } else {
-      overayImg.setAttribute('src', galleryImgsSrcs[--counter]);
-    }
-  };
-
-  next.onclick = function() {
-    const lastImgInArr = counter === galleryImgsSrcs.length - 1;
-    if (lastImgInArr) {
-      counter = 0;
-      overayImg.setAttribute('src', galleryImgsSrcs[counter]);
-    } else {
-      overayImg.setAttribute('src', galleryImgsSrcs[++counter]);
-    }
-  };
+    next.onclick = function() {
+      const lastImgInArr = counter === galleryImgsSrcs.length - 1;
+      if (lastImgInArr) {
+        counter = 0;
+        overayImg.setAttribute('src', galleryImgsSrcs[counter]);
+      } else {
+        overayImg.setAttribute('src', galleryImgsSrcs[++counter]);
+      }
+    };
+  }
+  attachOverlayActionHandlers();
 };
 
 

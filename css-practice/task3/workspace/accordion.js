@@ -1,21 +1,28 @@
 /* global document */
-let prevEvent = document.querySelector('.descr');
+let prevClickedTab = document.querySelector('.descr');
 /* eslint-disable-next-line */
 const imgInAccordion = document.querySelector('.work-description > .img-holder img');
 const showBlock = 'show-block';
 const rotateIcon = 'rotate-180';
+
 const contentToggler = function(clickedTabContent, clickedTab) {
-  if (prevEvent !== clickedTabContent) {
-    prevEvent.classList.remove(showBlock);
-    /* eslint-disable-next-line  */
-    prevEvent.parentElement.querySelector('i').classList.remove(rotateIcon);
-    prevEvent = clickedTabContent;
+  if (prevClickedTab !== clickedTabContent) {
+    closePrevTab(clickedTabContent);
     imgInAccordion.setAttribute('src', clickedTab.getAttribute('data-img'));
   }
+  toggleTab(clickedTabContent, clickedTab);
+};
 
+function closePrevTab(clicked) {
+  prevClickedTab.classList.remove(showBlock);
+  prevClickedTab.parentElement.querySelector('i').classList.remove(rotateIcon);
+  prevClickedTab = clicked;
+}
+
+function toggleTab(clickedTabContent, clickedTab) {
   clickedTabContent.classList.toggle(showBlock);
   clickedTab.querySelector('i').classList.toggle(rotateIcon);
-};
+}
 
 const allTabs = [...document.querySelectorAll('.activity')];
 allTabs.forEach((el) => {
