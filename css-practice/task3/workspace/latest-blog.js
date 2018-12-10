@@ -1,20 +1,7 @@
 /* global document */
+import BlogItem from './blog-item.js';
 
-class LatestBlogItem {
-  constructor(model) {
-    this.el = null;
-    this.model = model;
-  }
-
-  parseDate(dateString) {
-    /* eslint-disable-next-line*/
-    const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return {
-      day: new Date(dateString).getDate() - 1,
-      month: month[new Date(dateString).getMonth() + 1],
-    };
-  }
-
+export default class LatestBlogItem extends BlogItem {
   render() {
     const {
       previewImg,
@@ -48,7 +35,4 @@ class LatestBlogItem {
     return this.el;
   }
 }
-
-export default LatestBlogItem;
-
 

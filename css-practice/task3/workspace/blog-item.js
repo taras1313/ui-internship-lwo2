@@ -1,5 +1,5 @@
 /* global document */
-class FooterBlogItem {
+export default class BlogItem {
   constructor(model) {
     this.el = null;
     this.model = model;
@@ -7,10 +7,11 @@ class FooterBlogItem {
   parseDate(dateString) {
     /* eslint-disable-next-line*/
     const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const date = new Date(dateString);
     return {
-      day: new Date(dateString).getDay(),
-      month: month[new Date(dateString).getMonth() + 1],
-      year: new Date(dateString).getFullYear(),
+      day: date.getDate(),
+      month: month[date.getMonth() + 1],
+      year: date.getFullYear(),
     };
   }
   render() {
@@ -38,5 +39,3 @@ class FooterBlogItem {
     return this.el;
   }
 }
-
-export default FooterBlogItem;
