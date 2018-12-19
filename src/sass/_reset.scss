@@ -1,0 +1,22 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $bg-color;
+}
+
+a {
+  text-decoration: none;
+  color: $black-color;
+}
+
+button {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
