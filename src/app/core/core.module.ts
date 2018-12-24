@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { HeaderContactsComponent } from './header/header-contacts/header-contacts.component';
 import { HeaderNavComponent } from './header/header-nav/header-nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { MainComponent } from './main/main.component';
+import { SharedModule } from '../shared/shared.module';
+import { throwIfAlreadyLoaded } from './guard/module-import-guard';
+import { ContentComponent } from './content/content.component';
+
 
 @NgModule({
   declarations: [
@@ -12,17 +15,22 @@ import { MainComponent } from './main/main.component';
     FooterComponent,
     HeaderContactsComponent,
     HeaderNavComponent,
-    MainComponent
+    ContentComponent
   ], exports: [
     HeaderComponent,
     FooterComponent,
     HeaderContactsComponent,
     HeaderNavComponent,
-    MainComponent
+    ContentComponent
   ],
 
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    throwIfAlreadyLoaded(parentModule, 'CoreModule');
+  }
+}
