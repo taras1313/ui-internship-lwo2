@@ -26,7 +26,8 @@ import { ContentComponent } from './content/content.component';
 
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    SharedModule.forRoot()
   ]
 })
 export class CoreModule {

@@ -16,7 +16,8 @@ const MODULES = [
   imports: [
     CommonModule,
     NgbModule,
-  ], exports: [...MODULES],
+  ],
+  exports: [...MODULES],
 
 })
 export class SharedModule {

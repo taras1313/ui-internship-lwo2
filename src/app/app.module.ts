@@ -14,10 +14,10 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot(),
     CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {  }
