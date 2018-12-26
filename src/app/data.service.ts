@@ -29,6 +29,7 @@ export class DataService {
   public ejectHeader(key): void {
     this.headers.delete(key);
   }
+  
   public get(path:string, options:RequestOptions): Observable<any> {
     return this.sendRequest('get', path, options);
   }
