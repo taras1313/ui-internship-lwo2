@@ -18,28 +18,27 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  public injectHeader(key:string, value: string): void {
-    this.headers.set(key, value);
+  public create(path: string, options: RequestOptions): Observable<any> {
+    return this.sendRequest('post', path, options);
   }
-
+  
+  public delete(path: string, options: RequestOptions): Observable<any> {
+    return this.sendRequest('delete', path, options);
+  }
+  
   public ejectHeader(key): void {
     this.headers.delete(key);
   }
-
   public get(path:string, options:RequestOptions): Observable<any> {
     return this.sendRequest('get', path, options);
-  }
-
-  public create(path: string, options: RequestOptions): Observable<any> {
-    return this.sendRequest('post', path, options);
   }
 
   public update(path: string, options: RequestOptions): Observable<any> {
     return this.sendRequest('put', path, options);
   }
-
-  public delete(path: string, options: RequestOptions): Observable<any> {
-    return this.sendRequest('delete', path, options);
+  
+  private getUrl(path:string): string {
+    return `${this.baseURL}/${path}`;
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -53,10 +52,6 @@ export class DataService {
     return throwError(
       'Something bad happened; please try again later.');
   };
-
-  private getUrl(path:string): string {
-    return `${this.baseURL}/${path}`;
-  }
 
   private sendRequest(method:string, path:string, options:RequestOptions): Observable<any> {
     if(!this.http[method]) throw new Error('Method does\'nt supported in HTTPClient')
