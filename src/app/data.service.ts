@@ -18,37 +18,12 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  private handleError(error: HttpErrorResponse) {
-    if (error.error instanceof ErrorEvent) {
-      console.error('An error occurred:', error.error.message);
-    } else {
-      console.error(
-        `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
-    }
-    return throwError(
-      'Something bad happened; please try again later.');
-  };
-
   public injectHeader(key:string, value: string): void {
     this.headers.set(key, value);
   }
 
   public ejectHeader(key): void {
     this.headers.delete(key);
-  }
-
-  private getUrl(path:string): string {
-    return `${this.baseURL}/${path}`;
-  }
-
-  private sendRequest(method:string, path:string, options:RequestOptions): Observable<any> {
-    if(!this.http[method]) throw new Error('Method does\'nt supported in HTTPClient')
-
-    return this.http[method](this.getUrl(path), {
-      headers: this.headers,
-      ...options
-    }).pipe(catchError(this.handleError));
   }
 
   public get(path:string, options:RequestOptions): Observable<any> {
@@ -65,6 +40,31 @@ export class DataService {
 
   public delete(path: string, options: RequestOptions): Observable<any> {
     return this.sendRequest('delete', path, options);
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      console.error('An error occurred:', error.error.message);
+    } else {
+      console.error(
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
+    }
+    return throwError(
+      'Something bad happened; please try again later.');
+  };
+
+  private getUrl(path:string): string {
+    return `${this.baseURL}/${path}`;
+  }
+
+  private sendRequest(method:string, path:string, options:RequestOptions): Observable<any> {
+    if(!this.http[method]) throw new Error('Method does\'nt supported in HTTPClient')
+
+    return this.http[method](this.getUrl(path), {
+      headers: this.headers,
+      ...options
+    }).pipe(catchError(this.handleError));
   }
 
 }

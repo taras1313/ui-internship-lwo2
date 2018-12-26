@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { HeaderContactsComponent } from './header/header-contacts/header-contacts.component';
 import { HeaderNavComponent } from './header/header-nav/header-nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderNavComponent } from './header/header-nav/header-nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
